@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Pertemuan 02</title>
+<link rel="stylesheet" href="assets/style.css">
+<script src="assets/app.js" defer></script>
+<script src="assets/widgets1.js" defer></script>
+<script src="assets/widgets2.js" defer></script>
+<script src="assets/widgets3.js" defer></script>
+</head>
+<body data-week="2" data-cpmk="2" data-goal="Mampu menavigasi antarmuka CorelDRAW dan mengolah objek vektor dasar (Pick Tool, Rectangle, Ellipse, transformasi, Align, Weld, Trim, Intersect).">
+<main>
+
+<section data-tab="Teori">
+  <h2>Rundown teori 45 menit</h2>
+  <div class="tscroll"><table class="agenda">
+    <tr><th>Menit</th><th>Kegiatan</th><th>Bagian</th></tr>
+    <tr><td>00–05</td><td>Review tugas minggu 1 dan tujuan hari ini</td><td>—</td></tr>
+    <tr><td>05–12</td><td>Vektor vs bitmap, anatomi objek vektor</td><td>1–2</td></tr>
+    <tr><td>12–20</td><td>Antarmuka dan set-up dokumen</td><td>3–4</td></tr>
+    <tr><td>20–30</td><td>Alat dasar, transformasi, Align</td><td>5–7</td></tr>
+    <tr><td>30–40</td><td>Shaping: Weld, Trim, Intersect (lab interaktif)</td><td>8–9</td></tr>
+    <tr><td>40–45</td><td>Resep ikon, tanya jawab, briefing praktikum</td><td>10</td></tr>
+  </table></div>
+
+  <h2>1 · Vektor vs bitmap</h2>
+  <figure class="fig"><svg viewBox="0 0 540 190">
+    <text x="10" y="16" class="tr">BITMAP · diperbesar 800%</text>
+    <g class="fg"><rect x="75" y="35" width="10" height="10"/><rect x="45" y="45" width="10" height="10"/><rect x="55" y="45" width="10" height="10"/><rect x="65" y="45" width="10" height="10"/><rect x="75" y="45" width="10" height="10"/><rect x="85" y="45" width="10" height="10"/><rect x="95" y="45" width="10" height="10"/><rect x="105" y="45" width="10" height="10"/><rect x="35" y="55" width="10" height="10"/><rect x="45" y="55" width="10" height="10"/><rect x="55" y="55" width="10" height="10"/><rect x="65" y="55" width="10" height="10"/><rect x="75" y="55" width="10" height="10"/><rect x="85" y="55" width="10" height="10"/><rect x="95" y="55" width="10" height="10"/><rect x="105" y="55" width="10" height="10"/><rect x="115" y="55" width="10" height="10"/><rect x="35" y="65" width="10" height="10"/><rect x="45" y="65" width="10" height="10"/><rect x="55" y="65" width="10" height="10"/><rect x="65" y="65" width="10" height="10"/><rect x="75" y="65" width="10" height="10"/><rect x="85" y="65" width="10" height="10"/><rect x="95" y="65" width="10" height="10"/><rect x="105" y="65" width="10" height="10"/><rect x="115" y="65" width="10" height="10"/><rect x="35" y="75" width="10" height="10"/><rect x="45" y="75" width="10" height="10"/><rect x="55" y="75" width="10" height="10"/><rect x="65" y="75" width="10" height="10"/><rect x="75" y="75" width="10" height="10"/><rect x="85" y="75" width="10" height="10"/><rect x="95" y="75" width="10" height="10"/><rect x="105" y="75" width="10" height="10"/><rect x="115" y="75" width="10" height="10"/><rect x="25" y="85" width="10" height="10"/><rect x="35" y="85" width="10" height="10"/><rect x="45" y="85" width="10" height="10"/><rect x="55" y="85" width="10" height="10"/><rect x="65" y="85" width="10" height="10"/><rect x="75" y="85" width="10" height="10"/><rect x="85" y="85" width="10" height="10"/><rect x="95" y="85" width="10" height="10"/><rect x="105" y="85" width="10" height="10"/><rect x="115" y="85" width="10" height="10"/><rect x="125" y="85" width="10" height="10"/><rect x="35" y="95" width="10" height="10"/><rect x="45" y="95" width="10" height="10"/><rect x="55" y="95" width="10" height="10"/><rect x="65" y="95" width="10" height="10"/><rect x="75" y="95" width="10" height="10"/><rect x="85" y="95" width="10" height="10"/><rect x="95" y="95" width="10" height="10"/><rect x="105" y="95" width="10" height="10"/><rect x="115" y="95" width="10" height="10"/><rect x="35" y="105" width="10" height="10"/><rect x="45" y="105" width="10" height="10"/><rect x="55" y="105" width="10" height="10"/><rect x="65" y="105" width="10" height="10"/><rect x="75" y="105" width="10" height="10"/><rect x="85" y="105" width="10" height="10"/><rect x="95" y="105" width="10" height="10"/><rect x="105" y="105" width="10" height="10"/><rect x="115" y="105" width="10" height="10"/><rect x="35" y="115" width="10" height="10"/><rect x="45" y="115" width="10" height="10"/><rect x="55" y="115" width="10" height="10"/><rect x="65" y="115" width="10" height="10"/><rect x="75" y="115" width="10" height="10"/><rect x="85" y="115" width="10" height="10"/><rect x="95" y="115" width="10" height="10"/><rect x="105" y="115" width="10" height="10"/><rect x="115" y="115" width="10" height="10"/><rect x="45" y="125" width="10" height="10"/><rect x="55" y="125" width="10" height="10"/><rect x="65" y="125" width="10" height="10"/><rect x="75" y="125" width="10" height="10"/><rect x="85" y="125" width="10" height="10"/><rect x="95" y="125" width="10" height="10"/><rect x="105" y="125" width="10" height="10"/><rect x="75" y="135" width="10" height="10"/></g>
+    <text x="290" y="16" class="tr">VEKTOR · diperbesar 800%</text>
+    <circle cx="395" cy="95" r="62" class="rd"/>
+    <text x="10" y="182" class="tm">kotak piksel → tepi bergerigi</text><text x="290" y="182" class="tm">rumus kurva → tepi tetap halus</text>
+  </svg><figcaption><b>Gambar 1.</b> Lingkaran yang sama, diperbesar. Bitmap menampakkan piksel; vektor tetap tajam.</figcaption></figure>
+  <div class="tscroll"><table>
+    <tr><th></th><th>Vektor</th><th>Bitmap (raster)</th></tr>
+    <tr><td>Tersusun dari</td><td>Node dan kurva (rumus matematika)</td><td>Kotak piksel</td></tr>
+    <tr><td>Diperbesar</td><td>Tetap tajam</td><td>Pecah / buram</td></tr>
+    <tr><td>Ukuran file</td><td>Kecil (bergantung kerumitan)</td><td>Besar (bergantung resolusi)</td></tr>
+    <tr><td>Cocok untuk</td><td>Logo, ikon, ilustrasi, tipografi</td><td>Foto</td></tr>
+    <tr><td>Format umum</td><td>.cdr, .ai, .svg, .eps, .pdf</td><td>.jpg, .png, .tif</td></tr>
+  </table></div>
+  <div class="callout"><b class="t">Mengapa penting untuk RS</b>Logo rumah sakit harus berupa vektor agar bisa dicetak sekecil kartu nama dan sebesar baliho tanpa pecah.</div>
+
+  <h2>2 · Anatomi objek vektor</h2>
+  <figure class="fig"><svg viewBox="0 0 540 190">
+    <path d="M60 140 C 100 20, 220 20, 260 120" class="sr" stroke-width="3"/>
+    <line x1="60" y1="140" x2="100" y2="60" class="sd"/><line x1="260" y1="120" x2="215" y2="52" class="sd"/>
+    <circle cx="100" cy="60" r="4" class="rd"/><circle cx="215" cy="52" r="4" class="rd"/>
+    <rect x="54" y="134" width="12" height="12" class="fg"/><rect x="254" y="114" width="12" height="12" class="fg"/>
+    <text x="30" y="168" class="tx">NODE (titik)</text><text x="228" y="148" class="tx">NODE</text>
+    <text x="110" y="45" class="tm">handle</text><text x="222" y="40" class="tm">handle</text>
+    <text x="140" y="100" class="tr">SEGMEN (kurva)</text>
+    <rect x="330" y="40" width="150" height="100" style="fill:#0B5FA5;stroke:#EAEAEA;stroke-width:6"/>
+    <text x="330" y="30" class="tr">OBJEK</text>
+    <path d="M345 120l30-14 30 8 30-16 30 6" class="sd"/>
+    <line x1="480" y1="90" x2="520" y2="70" class="sd"/><text x="486" y="62" class="tx">OUTLINE</text>
+    <line x1="400" y1="90" x2="420" y2="170" class="sd"/><text x="360" y="184" class="tx">FILL (isi)</text>
+  </svg><figcaption><b>Gambar 2.</b> Kiri: jalur (path) dibentuk dua node, satu segmen kurva, dan handle yang mengatur lengkung. Kanan: tiap objek punya fill (isi) dan outline (garis).</figcaption></figure>
+
+  <h2>3 · Mengenal antarmuka</h2>
+  <div class="widget" data-w="corelmap" data-title="PETA ANTARMUKA CORELDRAW"></div>
+  <figure class="fig"><svg viewBox="0 0 540 250">
+    <rect x="10" y="10" width="520" height="230" class="bk" style="stroke:#EAEAEA"/>
+    <rect x="10" y="10" width="520" height="22" class="fg"/><text x="20" y="25" style="font:700 11px monospace;fill:#0A0A0A">Create a New Document</text>
+    <g class="tx"><text x="24" y="58">Name:</text><rect x="190" y="46" width="210" height="18" class="sk"/><text x="196" y="59" class="tm">Latihan02-NamaKamu</text>
+    <text x="24" y="86">Preset destination:</text><rect x="190" y="74" width="210" height="18" class="sk"/><text x="196" y="87" class="tm">Custom / Default CMYK</text>
+    <text x="24" y="114">Size / Width × Height:</text><rect x="190" y="102" width="120" height="18" class="sk"/><text x="196" y="115" class="tm">210,0 × 297,0 mm</text>
+    <text x="24" y="142">Units / Orientation:</text><rect x="190" y="130" width="120" height="18" class="sk"/><text x="196" y="143" class="tm">millimeters</text><rect x="320" y="130" width="60" height="18" class="sk"/><text x="326" y="143" class="tm">Portrait</text>
+    <text x="24" y="170">Primary color mode:</text><rect x="190" y="158" width="120" height="18" class="sk"/><text x="196" y="171" class="tm">CMYK</text>
+    <text x="24" y="198">Rendering resolution:</text><rect x="190" y="186" width="120" height="18" class="sk"/><text x="196" y="199" class="tm">300 dpi</text></g>
+    <rect x="420" y="206" width="48" height="22" class="rd"/><text x="432" y="221" style="font:700 11px monospace;fill:#fff">OK</text>
+    <g class="rd"><circle cx="418" cy="55" r="9"/><circle cx="418" cy="83" r="9"/><circle cx="328" cy="111" r="9"/><circle cx="398" cy="139" r="9"/><circle cx="328" cy="167" r="9"/><circle cx="328" cy="195" r="9"/></g>
+    <g style="font:700 11px monospace;fill:#fff" text-anchor="middle"><text x="418" y="59">1</text><text x="418" y="87">2</text><text x="328" y="115">3</text><text x="398" y="143">4</text><text x="328" y="171">5</text><text x="328" y="199">6</text></g>
+  </svg><figcaption><b>Gambar 3.</b> Dialog dokumen baru (<kbd>Ctrl</kbd>+<kbd>N</kbd>); tampilan dapat sedikit berbeda antar versi. Penjelasan nomor ada di tabel bagian 4.</figcaption></figure>
+
+  <h2>4 · Set-up dokumen cetak</h2>
+  <div class="tscroll"><table>
+    <tr><th>#</th><th>Pengaturan</th><th>Nilai untuk cetak</th><th>Alasan</th></tr>
+    <tr><td>1</td><td>Name</td><td>Format: <code>Latihan02-NamaKamu</code></td><td>Mudah dicari dan dinilai</td></tr>
+    <tr><td>2</td><td>Preset destination</td><td>Default CMYK / Print</td><td>Menyiapkan profil warna cetak</td></tr>
+    <tr><td>3</td><td>Size</td><td>Sesuai ukuran jadi (mis. A4 = 210 × 297 mm)</td><td>Hasil cetak sama dengan ukuran di layar</td></tr>
+    <tr><td>4</td><td>Units</td><td>Millimeters</td><td>Percetakan bekerja dalam mm/cm</td></tr>
+    <tr><td>5</td><td>Primary color mode</td><td>CMYK</td><td>Menghindari warna berubah saat dicetak</td></tr>
+    <tr><td>6</td><td>Rendering resolution</td><td>300 dpi</td><td>Efek dan bayangan tajam saat dicetak</td></tr>
+  </table></div>
+  <p>Simpan segera dengan <kbd>Ctrl</kbd>+<kbd>S</kbd> sebagai <code>.cdr</code> (file kerja asli). Format lain seperti PNG/PDF adalah hasil ekspor, bukan pengganti file kerja.</p>
+
+  <h2>5 · Alat dasar</h2>
+  <div class="tscroll"><table>
+    <tr><th>Alat</th><th>Pintasan</th><th>Fungsi dan tip</th></tr>
+    <tr><td>Pick Tool</td><td><kbd>Space</kbd> (beralih sementara)</td><td>Memilih, memindah, mengubah ukuran. <kbd>Ctrl</kbd>+tarik sudut menjaga proporsi; <kbd>Shift</kbd> mengubah dari tengah.</td></tr>
+    <tr><td>Rectangle</td><td><kbd>F6</kbd></td><td>Persegi panjang. Tahan <kbd>Ctrl</kbd> = persegi. Sudut membulat diatur di Property Bar.</td></tr>
+    <tr><td>Ellipse</td><td><kbd>F7</kbd></td><td>Elips. Tahan <kbd>Ctrl</kbd> = lingkaran sempurna; <kbd>Shift</kbd> = dari titik tengah.</td></tr>
+    <tr><td>Shape Tool</td><td><kbd>F10</kbd></td><td>Mengedit node dan sudut objek.</td></tr>
+    <tr><td>Zoom</td><td><kbd>Z</kbd></td><td>Perbesar/perkecil. <kbd>F4</kbd> = tampilkan semua objek, <kbd>Shift</kbd>+<kbd>F4</kbd> = seluruh halaman.</td></tr>
+    <tr><td>Fill / Outline</td><td><kbd>Shift</kbd>+<kbd>F11</kbd> / <kbd>F12</kbd></td><td>Dialog warna isi dan pengaturan garis.</td></tr>
+  </table></div>
+  <h3>Tombol yang wajib hafal</h3>
+  <div class="grid">
+    <div><kbd>Ctrl</kbd>+<kbd>D</kbd><p>Duplikat objek</p></div>
+    <div><kbd>Ctrl</kbd>+<kbd>G</kbd> / <kbd>Ctrl</kbd>+<kbd>U</kbd><p>Group / Ungroup</p></div>
+    <div><kbd>P</kbd> · <kbd>E</kbd> · <kbd>C</kbd><p>Pusatkan ke halaman · sejajar tengah horizontal · sejajar tengah vertikal</p></div>
+    <div><kbd>Ctrl</kbd>+<kbd>Z</kbd> / <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>Z</kbd><p>Undo / Redo</p></div>
+    <div><kbd>Ctrl</kbd>+<kbd>S</kbd><p>Simpan (lakukan sering)</p></div>
+    <div><kbd>Ctrl</kbd>+<kbd>E</kbd><p>Export</p></div>
+  </div>
+
+  <h2>6 · Transformasi objek</h2>
+  <figure class="fig"><svg viewBox="0 0 540 190">
+    <rect x="60" y="40" width="120" height="90" style="fill:#555;stroke:#EAEAEA"/>
+    <g class="fg"><rect x="55" y="35" width="10" height="10"/><rect x="115" y="35" width="10" height="10"/><rect x="175" y="35" width="10" height="10"/><rect x="55" y="80" width="10" height="10"/><rect x="175" y="80" width="10" height="10"/><rect x="55" y="125" width="10" height="10"/><rect x="115" y="125" width="10" height="10"/><rect x="175" y="125" width="10" height="10"/></g>
+    <text x="60" y="160" class="tr">SKALA</text><text x="60" y="176" class="tm">sudut = proporsional</text>
+    <rect x="290" y="45" width="100" height="80" style="fill:#555;stroke:#EAEAEA" transform="rotate(-15 340 85)"/>
+    <path d="M410 40a40 40 0 0 1 20 40" class="sr" stroke-width="2"/><path d="M426 70l4 10-10-2" class="sr" stroke-width="2"/>
+    <text x="290" y="160" class="tr">PUTAR (ROTATE)</text><text x="290" y="176" class="tm">isi Angle, mis. 90°</text>
+    <path d="M470 60h40m-10-6l10 6-10 6M470 110h-40m10-6l-10 6 10 6" class="sk"/>
+    <text x="436" y="40" class="tr">CERMIN</text><text x="436" y="130" class="tm">Mirror H / V</text>
+  </svg><figcaption><b>Gambar 4.</b> Tiga transformasi utama. Ketik angka di Property Bar untuk hasil presisi.</figcaption></figure>
+  <ul><li><b>Klik sekali</b> pada objek terpilih → mode putar (panah melengkung) dan <i>skew</i> (panah ganda di sisi).</li><li>Kunci proporsi: gembok kecil di samping W/H pada Property Bar.</li><li><b>Duplikat dengan offset</b>: <kbd>Ctrl</kbd>+<kbd>D</kbd> menggeser salinan sedikit; atur jarak di Tools → Options → Document → Duplicate offset (atau pindahkan manual).</li></ul>
+
+  <h2>7 · Merapikan objek</h2>
+  <figure class="fig"><svg viewBox="0 0 540 150">
+    <g class="fg"><rect x="20" y="30" width="30" height="30"/><rect x="40" y="75" width="60" height="30"/><rect x="25" y="120" width="40" height="20"/></g><text x="20" y="18" class="tm">sebelum (acak)</text>
+    <path d="M115 85h40m-10-6l10 6-10 6" class="sk"/>
+    <g class="fg"><rect x="170" y="30" width="30" height="30"/><rect x="170" y="75" width="60" height="30"/><rect x="170" y="120" width="40" height="20"/></g><line x1="170" y1="22" x2="170" y2="146" class="sr"/><text x="170" y="14" class="tr">Align Left</text>
+    <g class="fg"><rect x="305" y="30" width="30" height="30"/><rect x="290" y="75" width="60" height="30"/><rect x="295" y="120" width="40" height="20"/></g><line x1="320" y1="22" x2="320" y2="146" class="sr"/><text x="270" y="14" class="tr">Center H</text>
+    <g class="fg"><rect x="400" y="40" width="30" height="30"/><rect x="440" y="40" width="30" height="30"/><rect x="500" y="40" width="30" height="30"/></g><text x="400" y="14" class="tr">Distribute</text><text x="400" y="88" class="tm">jarak tidak sama</text>
+    <g class="fg"><rect x="400" y="110" width="30" height="30"/><rect x="450" y="110" width="30" height="30"/><rect x="500" y="110" width="30" height="30"/></g><text x="400" y="102" class="tm">sesudah: sama</text>
+  </svg><figcaption><b>Gambar 5.</b> Buka <b>Align and Distribute</b> dengan <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>A</kbd>. Align = menyejajarkan; Distribute = meratakan jarak.</figcaption></figure>
+  <ul><li><b>Urutan tumpuk</b>: <kbd>Ctrl</kbd>+<kbd>PgUp</kbd> / <kbd>PgDn</kbd> (maju/mundur satu langkah), <kbd>Shift</kbd>+<kbd>PgUp</kbd> / <kbd>PgDn</kbd> (paling depan/belakang).</li><li><b>Lock Object</b> (klik kanan) mengunci objek agar tidak tergeser tak sengaja.</li><li>Tekan <kbd>Esc</kbd> membatalkan pilihan; <kbd>Alt</kbd>+klik memilih objek di bawah tumpukan.</li></ul>
+
+  <h2>8 · Warna isi dan garis dasar</h2>
+  <div class="tscroll"><table>
+    <tr><th>Aksi</th><th>Hasil</th></tr>
+    <tr><td>Klik kiri pada palet warna</td><td>Mengubah warna <b>isi (fill)</b></td></tr>
+    <tr><td>Klik kanan pada palet warna</td><td>Mengubah warna <b>garis (outline)</b></td></tr>
+    <tr><td>Klik kiri / kanan pada kotak “X”</td><td>Menghapus fill / outline</td></tr>
+    <tr><td><kbd>Shift</kbd>+<kbd>F11</kbd></td><td>Dialog Uniform Fill: isi nilai C M Y K tepat</td></tr>
+    <tr><td><kbd>F12</kbd></td><td>Dialog Outline Pen: ketebalan, jenis, sudut</td></tr>
+  </table></div>
+
+  <h2>9 · Menggabungkan objek (Shaping)</h2>
+  <p>Dua objek atau lebih dapat dilebur atau dipotong untuk membuat bentuk baru. Tombolnya muncul di Property Bar saat ≥ 2 objek terpilih, atau lewat <b>Object → Shaping</b> dan docker Shaping.</p>
+  <div class="widget" data-w="shapelab" data-title="LAB WELD / TRIM / INTERSECT"></div>
+  <figure class="fig"><svg viewBox="0 0 540 150">
+    <defs>
+      <mask id="mA"><rect x="-10" y="-10" width="120" height="110" fill="#fff"/><circle cx="62" cy="48" r="26" fill="#000"/></mask>
+      <mask id="mB"><rect x="-10" y="-10" width="120" height="110" fill="#fff"/><rect x="14" y="14" width="46" height="46" fill="#000"/></mask>
+      <clipPath id="cB"><circle cx="62" cy="48" r="26"/></clipPath>
+    </defs>
+    <g transform="translate(0 20)"><rect x="14" y="14" width="46" height="46" class="fg"/><circle cx="62" cy="48" r="26" class="rd" style="fill-opacity:.85"/><text x="10" y="92" class="tx">Asli</text></g>
+    <g transform="translate(90 20)"><rect x="14" y="14" width="46" height="46" class="rd"/><circle cx="62" cy="48" r="26" class="rd"/><text x="10" y="92" class="tx">Weld</text></g>
+    <g transform="translate(180 20)"><rect x="14" y="14" width="46" height="46" class="fg" mask="url(#mA)"/><circle cx="62" cy="48" r="26" class="sd" stroke-dasharray="4 3"/><text x="10" y="92" class="tx">Trim</text></g>
+    <g transform="translate(270 20)"><rect x="14" y="14" width="46" height="46" class="sd" stroke-dasharray="4 3"/><circle cx="62" cy="48" r="26" class="sd" stroke-dasharray="4 3"/><rect x="14" y="14" width="46" height="46" class="rd" clip-path="url(#cB)"/><text x="10" y="92" class="tx">Intersect</text></g>
+    <g transform="translate(360 20)"><circle cx="62" cy="48" r="26" class="rd" mask="url(#mB)"/><text x="10" y="92" class="tx">Front − Back</text></g>
+    <g transform="translate(450 20)"><rect x="14" y="14" width="46" height="46" class="fg" mask="url(#mA)"/><text x="10" y="92" class="tx">Back − Front</text></g>
+    <text x="10" y="134" class="tm">Trim: objek sumber tetap ada (putus-putus).</text><text x="10" y="148" class="tm">Front − Back / Back − Front: objek sumber dihapus.</text>
+  </svg><figcaption><b>Gambar 6.</b> Enam hasil dari dua objek yang sama. Tombol Simplify, Front Minus Back, dan Back Minus Front tersedia di Property Bar bila beberapa objek terpilih.</figcaption></figure>
+  <div class="callout"><b class="t">Urutan penting</b>Pada Trim, hasil bergantung pada objek yang dipilih dan mana yang berada di depan. Jika hasilnya terbalik, <kbd>Ctrl</kbd>+<kbd>Z</kbd> lalu tukar objek yang dipilih. Weld/Trim bersifat permanen; simpan salinan jika ragu.</div>
+
+  <h2>10 · Resep ikon dari bentuk dasar</h2>
+  <div class="figs">
+    <figure class="fig"><svg viewBox="0 0 120 120"><path d="M42 12h36v30h30v36H78v30H42V78H12V42h30z" class="rd"/></svg><figcaption><b>Palang medis.</b> Persegi panjang + salinan diputar 90° → Weld.</figcaption></figure>
+    <figure class="fig"><svg viewBox="0 0 120 120"><path fill-rule="evenodd" d="M60 8a34 34 0 0 0-34 34c0 26 34 64 34 64s34-38 34-64A34 34 0 0 0 60 8zm0 20a14 14 0 1 1 0 28 14 14 0 0 1 0-28z" class="fg"/></svg><figcaption><b>Pin lokasi.</b> Lingkaran + persegi diputar 45° → Weld; lingkaran kecil → Trim.</figcaption></figure>
+    <figure class="fig"><svg viewBox="0 0 120 120"><path fill-rule="evenodd" d="M60 10a50 50 0 1 0 0 100 50 50 0 0 0 0-100zm0 26a24 24 0 1 1 0 48 24 24 0 0 1 0-48z" class="fg"/></svg><figcaption><b>Cincin.</b> Dua lingkaran sepusat → Trim.</figcaption></figure>
+    <figure class="fig"><svg viewBox="0 0 120 120"><path fill-rule="evenodd" d="M10 110V30h60v80zm0 0M70 110V55h40v55zM22 42h12v12H22zm22 0h12v12H44zM22 64h12v12H22zm22 0h12v12H44zM22 86h12v12H22zm22 0h12v12H44z" class="fg"/><path d="M36 4h10v8h8v10h-8v8H36v-8h-8V12h8z" class="rd"/></svg><figcaption><b>Gedung RS.</b> Persegi panjang − jendela (Trim) + palang di atap.</figcaption></figure>
+  </div>
+  <p class="refs">Rujukan resmi: <a href="https://product.corel.com/help/CorelDRAW/540229932/Main/EN/User-Guide/CorelDRAW-X7.pdf" target="_blank" rel="noopener">CorelDRAW X7 User Guide (PDF)</a> · cari bab “Shaping objects” dan “Working with objects”.</p>
+</section>
+
+<section data-tab="Praktikum">
+  <h2>Rundown praktikum 50 menit</h2>
+  <div class="tscroll"><table class="agenda">
+    <tr><th>Menit</th><th>Kegiatan</th><th>Hasil yang diperiksa dosen</th></tr>
+    <tr><td>00–08</td><td>A · Set-up dokumen</td><td>Dialog & penggaris benar</td></tr>
+    <tr><td>08–20</td><td>B · Ikon palang medis</td><td>Satu objek merah 60×60 mm di tengah</td></tr>
+    <tr><td>20–32</td><td>C · Pin lokasi dan cincin</td><td>Pin berlubang rapi</td></tr>
+    <tr><td>32–45</td><td>D · Gedung RS</td><td>Jendela sejajar dan merata</td></tr>
+    <tr><td>45–50</td><td>E · Simpan dan ekspor</td><td>File .cdr dan PNG terkumpul</td></tr>
+  </table></div>
+  <div class="callout"><b class="t">Aturan lab</b>Simpan setiap 5 menit. Menu dapat berbeda sedikit antar versi CorelDRAW. Centang tiap langkah setelah selesai; progresmu tersimpan di browser ini.</div>
+
+  <h2>A · Set-up dokumen cetak</h2>
+  <ol class="steps">
+    <li>Jalankan CorelDRAW → <b>File → New</b> (<kbd>Ctrl</kbd>+<kbd>N</kbd>).</li>
+    <li>Isi <b>Name</b>: <code>Latihan02-NamaKamu</code>. Pilih <b>Primary color mode: CMYK</b>, <b>Rendering resolution: 300 dpi</b>.</li>
+    <li>Atur <b>Width 210 mm, Height 297 mm (A4)</b>, satuan <b>millimeters</b>. Klik OK.</li>
+    <li>Simpan segera: <kbd>Ctrl</kbd>+<kbd>S</kbd> sebagai <code>.cdr</code>.</li>
+    <li>Munculkan penggaris: <b>View → Rulers</b>. Pastikan satuan di Property Bar adalah <code>mm</code>.</li>
+  </ol>
+  <div class="callout w"><b class="t">Checkpoint A</b>Property Bar menampilkan 210 × 297 mm, penggaris tampil, nama file benar. Panggil dosen bila belum.</div>
+
+  <h2>B · Ikon palang medis</h2>
+  <figure class="fig"><svg viewBox="0 0 640 150">
+    <g transform="translate(0 0)"><text x="10" y="16" class="tr">B1 · F6</text><rect x="25" y="50" width="100" height="34" class="fg"/><text x="25" y="108" class="tm">W 60 mm · H 20 mm</text><text x="25" y="124" class="tm">Ketik di Property Bar</text></g>
+    <g transform="translate(160 0)"><text x="10" y="16" class="tr">B2 · Ctrl+D, putar</text><rect x="20" y="58" width="100" height="34" class="fg"/><rect x="53" y="25" width="34" height="100" class="dm" style="fill-opacity:.8"/><text x="20" y="140" class="tm">Angle of rotation = 90</text></g>
+    <g transform="translate(320 0)"><text x="10" y="16" class="tr">B3 · Weld</text><path d="M53 25h34v33h33v34H87v33H53V92H20V58h33z" class="rd"/><text x="20" y="140" class="tm">menjadi satu objek</text></g>
+    <g transform="translate(480 0)"><text x="10" y="16" class="tr">B4 · Tekan P</text><rect x="18" y="30" width="110" height="100" class="sk"/><path d="M60 55h26v22h22v26H86v22H60v-22H38V77h22z" class="rd" transform="translate(-4 -6) scale(.95)"/><text x="18" y="144" class="tm">di tengah halaman</text></g>
+  </svg><figcaption><b>Gambar 7.</b> Empat tahap membuat palang medis.</figcaption></figure>
+  <ol class="steps">
+    <li>Tekan <kbd>F6</kbd>, gambar persegi panjang di halaman.</li>
+    <li>Pick Tool: ketik di Property Bar <b>W = 60 mm, H = 20 mm</b>, Enter.</li>
+    <li>Tekan <kbd>P</kbd> untuk memusatkan ke halaman.</li>
+    <li><kbd>Ctrl</kbd>+<kbd>D</kbd> menduplikat, lalu isi <b>Angle of rotation = 90</b> di Property Bar. Tekan <kbd>P</kbd> lagi bila bergeser.</li>
+    <li>Pilih keduanya (<kbd>Ctrl</kbd>+<kbd>A</kbd>) → klik tombol <b>Weld</b> di Property Bar.</li>
+    <li>Isi warna merah (C0 M100 Y100 K0 lewat <kbd>Shift</kbd>+<kbd>F11</kbd>). Klik kanan <b>X</b> pada palet untuk menghapus outline.</li>
+  </ol>
+  <div class="callout w"><b class="t">Checkpoint B</b>Satu objek (bukan dua) berbentuk palang, status bar menampilkan “Curve on Layer 1”, ukuran 60 × 60 mm, posisi tengah.</div>
+
+  <h2>C · Pin lokasi dan cincin</h2>
+  <figure class="fig"><svg viewBox="0 0 640 150">
+    <g><text x="10" y="16" class="tr">C1 · Lingkaran</text><circle cx="80" cy="76" r="40" class="fg"/></g>
+    <g transform="translate(160 0)"><text x="10" y="16" class="tr">C2 · Putar 45°</text><circle cx="80" cy="70" r="40" class="dm" style="fill-opacity:.7"/><path d="M80 78l24 24-24 24-24-24z" class="fg" style="fill-opacity:.9"/></g>
+    <g transform="translate(320 0)"><text x="10" y="16" class="tr">C3 · Weld</text><path d="M80 30a40 40 0 0 1 28 68l-28 32-28-32A40 40 0 0 1 80 30z" class="fg"/></g>
+    <g transform="translate(480 0)"><text x="10" y="16" class="tr">C4 · Trim</text><path fill-rule="evenodd" d="M80 30a40 40 0 0 1 28 68l-28 32-28-32A40 40 0 0 1 80 30zm0 22a14 14 0 1 0 0 28 14 14 0 0 0 0-28z" class="fg"/></g>
+  </svg><figcaption><b>Gambar 8.</b> Pin lokasi: lingkaran + diamond → Weld → lubang dengan Trim.</figcaption></figure>
+  <ol class="steps">
+    <li>Gambar lingkaran 40 × 40 mm (<kbd>F7</kbd> + <kbd>Ctrl</kbd>).</li>
+    <li>Gambar persegi 28 × 28 mm, putar 45°, geser agar sudut bawahnya membentuk ujung runcing di bawah lingkaran. Sejajarkan tengah dengan <kbd>C</kbd>.</li>
+    <li>Pilih keduanya → <b>Weld</b>. Hasilnya satu bentuk tetesan.</li>
+    <li>Gambar lingkaran kecil 14 mm di pusat lingkaran atas.</li>
+    <li>Pilih lingkaran kecil lalu objek tetesan → <b>Trim</b>. Hapus lingkaran kecil yang tersisa (<kbd>Delete</kbd>).</li>
+    <li>Cincin: dua lingkaran 40 mm dan 22 mm, sejajarkan tengahnya (<kbd>C</kbd> + <kbd>E</kbd>), lingkaran kecil Trim lingkaran besar.</li>
+  </ol>
+  <div class="callout w"><b class="t">Checkpoint C</b>Lubang di pin terlihat tembus: letakkan objek berwarna di belakangnya, lubang harus menampakkan warna itu.</div>
+
+  <h2>D · Gedung rumah sakit</h2>
+  <figure class="fig"><svg viewBox="0 0 640 150">
+    <g><text x="10" y="16" class="tr">D1 · Badan 70×50</text><rect x="30" y="40" width="100" height="90" class="fg"/></g>
+    <g transform="translate(170 0)"><text x="10" y="16" class="tr">D2 · Jendela</text><rect x="30" y="40" width="100" height="90" class="fg"/><g class="bk"><rect x="42" y="52" width="18" height="18"/><rect x="72" y="52" width="18" height="18"/><rect x="102" y="52" width="18" height="18"/><rect x="42" y="82" width="18" height="18"/><rect x="72" y="82" width="18" height="18"/><rect x="102" y="82" width="18" height="18"/></g></g>
+    <g transform="translate(340 0)"><text x="10" y="16" class="tr">D3 · Trim</text><path fill-rule="evenodd" d="M30 40h100v90H30zM42 52h18v18H42zm30 0h18v18H72zm30 0h18v18h-18zM42 82h18v18H42zm30 0h18v18H72zm30 0h18v18h-18z" class="fg"/></g>
+    <g transform="translate(500 0)"><text x="10" y="16" class="tr">D4 · Tambah palang</text><path fill-rule="evenodd" d="M30 50h100v80H30zM42 62h18v18H42zm30 0h18v18H72zm30 0h18v18h-18zM42 92h18v18H42zm30 0h18v18H72zm30 0h18v18h-18z" class="fg"/><path d="M71 24h18v10h10v14H89v-10H71z" class="rd" transform="translate(-4 -14) scale(1)"/></g>
+  </svg><figcaption><b>Gambar 9.</b> Gedung RS dari bentuk dasar.</figcaption></figure>
+  <ol class="steps">
+    <li>Persegi panjang 70 × 50 mm sebagai badan gedung.</li>
+    <li>Persegi 14 × 14 mm sebagai jendela. Duplikat dengan <kbd>Ctrl</kbd>+<kbd>D</kbd> menjadi 2 baris × 3 kolom.</li>
+    <li>Rapikan jarak dengan <b>Align and Distribute</b> (<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>A</kbd>): Align Top per baris, Distribute Centers Horizontally.</li>
+    <li>Pilih semua jendela → <b>Weld</b> (jadi satu objek). Pilih jendela, lalu badan gedung → <b>Trim</b>. Hapus sisa jendela.</li>
+    <li>Tambahkan palang medis kecil (hasil B diperkecil) di atas gedung dan beri warna biru RS (C100 M60 Y0 K0).</li>
+    <li>Group semua (<kbd>Ctrl</kbd>+<kbd>G</kbd>).</li>
+  </ol>
+  <div class="callout w"><b class="t">Checkpoint D</b>Jarak jendela sama di semua sisi; gedung dan palang terkelompok; tidak ada objek tersisa di luar halaman.</div>
+
+  <h2>E · Simpan dan ekspor</h2>
+  <ol class="steps">
+    <li><kbd>Ctrl</kbd>+<kbd>S</kbd>.</li>
+    <li><b>File → Export</b> (<kbd>Ctrl</kbd>+<kbd>E</kbd>) → PNG; centang <i>Selected only</i> jika perlu; 300 dpi; latar transparan.</li>
+    <li>Beri nama <code>NIM_Nama_Latihan02.png</code>.</li>
+  </ol>
+
+  <h2>Masalah umum</h2>
+  <div class="tscroll"><table>
+    <tr><th>Gejala</th><th>Penyebab</th><th>Solusi</th></tr>
+    <tr><td>Weld/Trim tidak aktif</td><td>Hanya satu objek terpilih</td><td>Pilih ≥ 2 objek (Shift+klik)</td></tr>
+    <tr><td>Hasil Trim terbalik</td><td>Urutan pilih salah</td><td>Undo, tukar objek yang dipilih lebih dulu</td></tr>
+    <tr><td>Objek tidak di tengah</td><td>Tidak dipusatkan</td><td>Tekan <kbd>P</kbd> atau Align and Distribute</td></tr>
+    <tr><td>Ukuran tidak sama</td><td>Proporsi terkunci / tidak mengetik ukuran</td><td>Ketik W dan H di Property Bar</td></tr>
+    <tr><td>Lubang tidak tembus</td><td>Objek pemotong belum dihapus / belum Trim</td><td>Pastikan Trim dilakukan dan hapus sisa objek pemotong</td></tr>
+    <tr><td>Tampilan tidak sama dengan hasil ekspor</td><td>Objek di luar halaman ikut terpilih</td><td>Aktifkan Selected only saat Export</td></tr>
+  </table></div>
+</section>
+
+<section data-tab="Latihan Sesi">
+  <h2>Tugas sesi pertemuan 2</h2>
+  <article class="task" data-id="setup" data-min="8"><h3>Latihan 1 · Set-up dokumen cetak</h3>
+    <p>Buat dokumen A4 CMYK 300 dpi berunit mm. Ambil tangkapan layar yang memperlihatkan Property Bar dan penggaris.</p>
+    <details><summary>Kriteria</summary><ul><li>Mode warna CMYK</li><li>Satuan mm</li><li>Nama file mengikuti format</li></ul></details></article>
+  <article class="task" data-id="palang" data-min="12"><h3>Latihan 2 · Tiga variasi palang medis</h3>
+    <p>Buat 3 versi: (a) palang tegas dengan sudut tajam, (b) palang dengan sudut membulat (atur radius sudut di Property Bar sebelum Weld), (c) palang di dalam lingkaran (Trim agar palang menjadi lubang). Ukuran akhir sama: 40 × 40 mm.</p>
+    <details><summary>Petunjuk (c)</summary><p>Lingkaran 40 mm, palang 24 mm di tengah. Pilih palang dulu, lalu lingkaran, klik Trim. Hapus objek palang sumber yang tersisa.</p></details></article>
+  <article class="task" data-id="pin" data-min="12"><h3>Latihan 3 · Pin lokasi dan cincin</h3>
+    <p>Selesaikan pin lokasi dengan lubang di tengah dan satu cincin. Susun keduanya sejajar dengan jarak sama (Align and Distribute).</p></article>
+  <article class="task" data-id="gedung" data-min="13"><h3>Latihan 4 · Gedung RS</h3>
+    <p>Selesaikan bagian D. Tambahkan variasi: jumlah jendela dan tinggi gedung berbeda dari contoh.</p></article>
+  <article class="task" data-id="enam" data-min="25"><h3>Latihan 5 · Tantangan: 6 ikon layanan RS (dilanjutkan di rumah)</h3>
+    <p>Buat enam ikon 40 × 40 mm dalam grid 3 × 2 di halaman A4. Hanya boleh memakai Rectangle, Ellipse, Weld, Trim, Intersect.</p>
+    <div class="tscroll"><table><tr><th>Ikon</th><th>Ide bentuk</th></tr>
+    <tr><td>IGD</td><td>Lingkaran + palang medis (Trim)</td></tr>
+    <tr><td>Farmasi</td><td>Kapsul: persegi membulat diputar 45°, garis tengah dipotong (Trim)</td></tr>
+    <tr><td>Laboratorium</td><td>Tabung reaksi: persegi panjang + setengah lingkaran bawah (Weld), isi cairan dengan Intersect</td></tr>
+    <tr><td>Rawat inap</td><td>Tempat tidur: persegi panjang panjang + kaki + bantal (Weld)</td></tr>
+    <tr><td>Radiologi</td><td>Bingkai persegi + lingkaran (Trim) menyerupai layar pindai</td></tr>
+    <tr><td>Pendaftaran</td><td>Papan klip: persegi membulat + klip kecil + garis-garis (Trim)</td></tr></table></div>
+    <details><summary>Kriteria penilaian</summary><ul><li>Semua ikon berukuran sama dan sejajar</li><li>Tidak ada objek menggantung/tumpang tindih tak sengaja</li><li>Satu gaya konsisten (warna dan ketebalan)</li></ul></details></article>
+  <article class="task" data-id="refleksi" data-min="5"><h3>Latihan 6 · Kumpulkan dan refleksi</h3>
+    <p>Kumpulkan file <code>.cdr</code> dan PNG melalui kanal yang disepakati kelas. Sebutkan satu kesulitan terbesarmu hari ini.</p>
+    <textarea class="note" data-key="refleksi"></textarea></article>
+</section>
+
+<section data-tab="Kuis">
+  <h2>Kuis</h2>
+  <div class="quiz"><script type="application/json">[
+    {"q":"Untuk logo yang harus bisa dicetak dari ukuran kartu nama sampai baliho, format terbaik adalah…","o":["JPG","Vektor (.cdr/.ai/.svg)","Bitmap 72 dpi","Tangkapan layar"],"a":1,"e":"Vektor tetap tajam di ukuran berapa pun."},
+    {"q":"Tombol untuk menggambar lingkaran sempurna dengan Ellipse Tool adalah menahan…","o":["Alt","Ctrl","Tab","Shift"],"a":1,"e":"Ctrl membatasi proporsi 1:1. Shift menggambar dari tengah."},
+    {"q":"Fungsi Weld adalah…","o":["Memotong objek belakang","Melebur beberapa objek jadi satu bentuk","Mengambil area irisan saja","Menyalin objek"],"a":1,"e":"Weld = melebur."},
+    {"q":"Untuk membuat lubang bentuk palang di dalam lingkaran, gunakan…","o":["Weld","Group","Trim","Align"],"a":2,"e":"Objek pemotong (palang) memotong lingkaran sehingga menjadi lubang."},
+    {"q":"Objek yang berada di luar kotak halaman (kanvas)…","o":["Tetap tercetak","Tidak tercetak","Tercetak setengah","Dicetak abu-abu"],"a":1,"e":"Hanya yang ada di Drawing Page yang tercetak."},
+    {"q":"Satuan, mode warna, dan resolusi diatur pertama kali pada…","o":["Dialog Create a New Document","Menu Help","Palet warna","Docker Object Manager"],"a":0,"e":"Set-up dokumen dilakukan di awal agar hasil cetak tepat."},
+    {"q":"Pintasan untuk memusatkan objek ke halaman adalah…","o":["P","G","D","X"],"a":0,"e":"P = Align to Page Center."},
+    {"q":"Klik kanan pada warna di palet akan mengubah…","o":["Isi objek","Garis (outline) objek","Latar halaman","Font"],"a":1,"e":"Kiri = fill, kanan = outline."},
+    {"q":"Untuk meratakan jarak antar tiga objek, fitur yang dipakai adalah…","o":["Align","Distribute","Group","Mirror"],"a":1,"e":"Distribute meratakan jarak."}
+  ]</script></div>
+</section>
+
+</main>
+</body>
+</html>

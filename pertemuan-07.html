@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Pertemuan 07</title>
+<link rel="stylesheet" href="assets/style.css">
+<script src="assets/app.js" defer></script>
+<script src="assets/widgets1.js" defer></script>
+<script src="assets/widgets2.js" defer></script>
+<script src="assets/widgets3.js" defer></script>
+</head>
+<body data-week="7" data-cpmk="6" data-goal="Mampu menyiapkan berkas desain untuk produksi cetak massal (pre-press): convert to curves, bleed dan crop marks, safe zone, resolusi, mode warna, serta ekspor PDF/X-1a.">
+<main>
+
+<section data-tab="Teori">
+  <h2>Rundown teori 50 menit</h2>
+  <div class="tscroll"><table class="agenda">
+    <tr><th>Menit</th><th>Kegiatan</th><th>Bagian</th></tr>
+    <tr><td>00–05</td><td>Review spanduk minggu 6; cerita kasus cetak gagal</td><td>1</td></tr>
+    <tr><td>05–15</td><td>Font: convert to curves (simulasi)</td><td>2</td></tr>
+    <tr><td>15–27</td><td>Bleed, crop marks, safe zone (simulasi mesin potong)</td><td>3</td></tr>
+    <tr><td>27–35</td><td>Resolusi gambar dan mode warna</td><td>4</td></tr>
+    <tr><td>35–45</td><td>Ekspor PDF/X-1a dan alur pra-cetak</td><td>5–6</td></tr>
+    <tr><td>45–50</td><td>Daftar periksa dan briefing audit berkas</td><td>7</td></tr>
+  </table></div>
+
+  <h2>1 · Mengapa cetakan gagal?</h2>
+  <p>Kebanyakan cetakan yang salah bukan karena desainnya jelek, tetapi karena <b>berkas tidak siap cetak</b>. Biayanya nyata: cetak ulang 1000 brosur bisa lebih mahal daripada seluruh jam desainmu.</p>
+  <div class="tscroll"><table>
+    <tr><th>Masalah</th><th>Akibat</th><th>Pencegahan</th></tr>
+    <tr><td>Font tidak ada di komputer percetakan</td><td>Huruf diganti, layout rusak</td><td>Convert to Curves atau embed font</td></tr>
+    <tr><td>Gambar resolusi rendah</td><td>Buram/pecah</td><td>Min. 300 dpi pada ukuran jadi (kecuali spanduk)</td></tr>
+    <tr><td>Tanpa bleed</td><td>Garis putih di tepi</td><td>Perluas latar 3 mm</td></tr>
+    <tr><td>Teks terlalu dekat tepi</td><td>Teks terpotong</td><td>Safe margin ≥ 3–5 mm</td></tr>
+    <tr><td>Mode warna RGB</td><td>Warna berubah saat dikonversi</td><td>Dokumen CMYK sejak awal</td></tr>
+    <tr><td>Gambar tertaut hilang</td><td>Kotak kosong/placeholder</td><td>Embed atau Collect for Output</td></tr>
+  </table></div>
+  <figure class="fig"><svg viewBox="0 0 540 110">
+    <g><rect x="10" y="20" width="90" height="50" class="sk"/><text x="55" y="50" text-anchor="middle" class="tx">DESAIN</text><text x="55" y="88" text-anchor="middle" class="tm">selesai</text></g>
+    <path d="M100 45h18M110 40l8 5-8 5" class="sk"/>
+    <g><rect x="118" y="20" width="90" height="50" class="sk"/><text x="163" y="50" text-anchor="middle" class="tx">PERIKSA</text><text x="163" y="88" text-anchor="middle" class="tm">daftar periksa</text></g>
+    <path d="M208 45h18M218 40l8 5-8 5" class="sk"/>
+    <g><rect x="226" y="20" width="90" height="50" class="sk"/><text x="271" y="50" text-anchor="middle" class="tx">KURVA</text><text x="271" y="88" text-anchor="middle" class="tm">font → curves</text></g>
+    <path d="M316 45h18M326 40l8 5-8 5" class="sk"/>
+    <g><rect x="334" y="20" width="90" height="50" class="sk"/><text x="379" y="50" text-anchor="middle" class="tx">EKSPOR</text><text x="379" y="88" text-anchor="middle" class="tm">PDF/X-1a</text></g>
+    <path d="M424 45h18M434 40l8 5-8 5" class="sk"/>
+    <g><rect x="442" y="20" width="90" height="50" class="rd"/><text x="487" y="50" text-anchor="middle" style="font:700 11px monospace;fill:#fff">KIRIM</text><text x="487" y="88" text-anchor="middle" class="tm">+ cek PDF</text></g>
+  </svg><figcaption><b>Gambar 1.</b> Alur pra-cetak lima langkah sebelum mengirim ke percetakan.</figcaption></figure>
+
+  <h2>2 · Font: convert to curves</h2>
+  <div class="widget" data-w="fontlost" data-title="SIMULASI FONT HILANG"></div>
+  <ul><li>Pintasan: <kbd>Ctrl</kbd>+<kbd>Q</kbd> (Object → Convert to Curves).</li><li>Setelah dikonversi, teks tidak bisa diubah isinya. <b>Simpan versi .cdr asli sebelum konversi</b>.</li><li>Alternatif: ekspor PDF dengan opsi <i>Embed fonts</i>, atau <b>File → Collect For Output</b> yang menyertakan font dan gambar tertaut.</li></ul>
+
+  <h2>3 · Bleed, crop marks, dan safe zone</h2>
+  <p><b>Bleed</b> adalah perluasan latar/gambar 3 mm melewati garis potong. <b>Crop marks</b> adalah garis kecil di sudut yang menunjukkan tempat memotong. <b>Safe zone</b> adalah area dalam tempat teks aman dari pemotongan.</p>
+  <figure class="fig"><svg viewBox="0 0 540 200">
+    <rect x="30" y="20" width="220" height="150" style="fill:#0B5FA5" stroke-dasharray="5 3" class="sr" stroke-width="2"/>
+    <rect x="42" y="32" width="196" height="126" class="sk" stroke-width="2"/>
+    <rect x="62" y="52" width="156" height="86" class="sd" stroke-dasharray="4 3"/>
+    <text x="140" y="92" text-anchor="middle" style="font:700 12px monospace;fill:#fff">TEKS &amp; LOGO</text><text x="140" y="108" text-anchor="middle" style="font:10px monospace;fill:#fff">di dalam safe zone</text>
+    <g class="tx"><text x="290" y="34">BLEED · 3 mm</text><text x="290" y="50" class="tm">latar meluas, akan terpotong</text>
+    <text x="290" y="92">TRIM · garis potong</text><text x="290" y="108" class="tm">ukuran jadi dokumen</text>
+    <text x="290" y="150">SAFE ZONE · 3–5 mm</text><text x="290" y="166" class="tm">teks tidak boleh keluar</text></g>
+    <path d="M250 28H282M238 100H282M218 148H282" class="sd"/>
+  </svg><figcaption><b>Gambar 2.</b> Tiga lapisan dari luar ke dalam: bleed, trim, safe zone.</figcaption></figure>
+  <figure class="fig"><svg viewBox="0 0 540 190">
+    <rect x="130" y="40" width="180" height="110" class="sk" stroke-width="2"/>
+    <rect x="124" y="34" width="192" height="122" class="sr" stroke-dasharray="4 3"/>
+    <g class="sk" stroke-width="2"><path d="M110 40h-24M130 20v-14"/><path d="M330 40h24M310 20v-14"/><path d="M110 150h-24M130 170v14"/><path d="M330 150h24M310 170v14"/></g>
+    <text x="370" y="30" class="tx">crop marks (tanda potong)</text><text x="370" y="46" class="tm">di luar area bleed</text>
+    <text x="150" y="100" class="tx">trim = di mana</text><text x="150" y="116" class="tx">pisau memotong</text>
+    <text x="10" y="186" class="tm">garis merah putus = batas bleed</text>
+  </svg><figcaption><b>Gambar 3.</b> Crop marks berada di luar bleed, sejajar dengan garis potong.</figcaption></figure>
+  <div class="widget" data-w="bleed" data-title="SIMULASI MESIN POTONG"></div>
+  <ul><li>Atur bleed: <b>Layout → Page Setup → Page Size → Bleed</b>.</li><li>Crop marks: saat ekspor PDF, tab <b>Prepress</b> → centang Crop marks (juga di dialog Print).</li><li>Mesin potong memiliki toleransi sekitar ±1–2 mm. Bleed 3 mm dan safe zone 3–5 mm menutup toleransi itu.</li></ul>
+
+  <h2>4 · Resolusi gambar dan mode warna</h2>
+  <div class="tscroll"><table>
+    <tr><th>Media</th><th>Resolusi pada ukuran jadi</th><th>Catatan</th></tr>
+    <tr><td>Brosur, poster A3, kartu</td><td>300 dpi</td><td>Foto 3000 px lebar cukup untuk 25 cm</td></tr>
+    <tr><td>Poster besar</td><td>150–200 dpi</td><td>Dilihat dari jarak ≥ 1 m</td></tr>
+    <tr><td>Spanduk / baliho</td><td>10–70 dpi</td><td>Lihat pertemuan 6</td></tr>
+  </table></div>
+  <figure class="fig"><svg viewBox="0 0 540 150">
+    <g><rect x="12" y="20" width="50" height="50" style="fill:#00FF40"/><rect x="62" y="20" width="50" height="50" style="fill:#4FB34B"/><text x="12" y="90" class="tm">hijau neon</text><text x="12" y="104" class="tm">layar → cetak</text></g>
+    <g transform="translate(140 0)"><rect x="12" y="20" width="50" height="50" style="fill:#00A2FF"/><rect x="62" y="20" width="50" height="50" style="fill:#2A8FC8"/><text x="12" y="90" class="tm">biru cerah</text><text x="12" y="104" class="tm">layar → cetak</text></g>
+    <g transform="translate(280 0)"><rect x="12" y="20" width="50" height="50" style="fill:#FF0090"/><rect x="62" y="20" width="50" height="50" style="fill:#D6267F"/><text x="12" y="90" class="tm">magenta neon</text><text x="12" y="104" class="tm">layar → cetak</text></g>
+    <g transform="translate(420 0)"><rect x="12" y="20" width="50" height="50" style="fill:#FFE600"/><rect x="62" y="20" width="50" height="50" style="fill:#F2CC1A"/><text x="12" y="90" class="tm">kuning terang</text><text x="12" y="104" class="tm">layar → cetak</text></g>
+    <text x="10" y="138" class="tr">KIRI = TAMPILAN LAYAR (RGB) · KANAN = PERKIRAAN SETELAH CMYK</text>
+  </svg><figcaption><b>Gambar 4.</b> Ilustrasi perkiraan: warna sangat jenuh di layar menjadi lebih kusam saat dicetak. Warna sebenarnya bergantung profil dan kertas.</figcaption></figure>
+  <ul><li>Pastikan mode dokumen <b>CMYK</b>; periksa gambar RGB yang diimpor (Bitmaps → Mode → CMYK).</li><li>Hindari warna neon yang hanya ada di RGB.</li><li>Jumlah tinta total ≤ ±300%.</li></ul>
+
+  <h2>5 · Ekspor PDF/X-1a</h2>
+  <p>PDF/X-1a adalah standar PDF untuk pertukaran berkas cetak: semua warna CMYK/spot, font tertanam, tanpa transparansi tersisa, dan tanpa elemen yang bisa berubah.</p>
+  <figure class="fig"><svg viewBox="0 0 540 210">
+    <rect x="10" y="10" width="520" height="190" class="bk" style="stroke:#EAEAEA"/>
+    <rect x="10" y="10" width="520" height="22" class="fg"/><text x="20" y="25" style="font:700 11px monospace;fill:#0A0A0A">Publish to PDF · Settings</text>
+    <g class="tx"><rect x="20" y="42" width="60" height="18" class="sk"/><text x="26" y="55">General</text><rect x="84" y="42" width="60" height="18" class="sk"/><text x="90" y="55">Objects</text><rect x="148" y="42" width="66" height="18" class="rd"/><text x="154" y="55" style="fill:#fff">Prepress</text><rect x="218" y="42" width="50" height="18" class="sk"/><text x="224" y="55">Color</text></g>
+    <g class="tx"><text x="30" y="92">PDF preset:</text><rect x="150" y="80" width="160" height="16" class="sk"/><text x="156" y="92" class="tm">PDF/X-1a</text>
+    <text x="30" y="118">Crop marks:</text><rect x="150" y="108" width="14" height="14" class="rd"/><text x="172" y="119" class="tm">aktif</text>
+    <text x="30" y="144">Bleed limit:</text><rect x="150" y="132" width="60" height="16" class="sk"/><text x="156" y="144" class="tm">3,0 mm</text>
+    <text x="30" y="170">Colors as:</text><rect x="150" y="158" width="160" height="16" class="sk"/><text x="156" y="170" class="tm">CMYK</text></g>
+    <g class="rd"><circle cx="330" cy="88" r="9"/><circle cx="330" cy="115" r="9"/><circle cx="330" cy="140" r="9"/><circle cx="330" cy="166" r="9"/></g>
+    <g style="font:700 10px monospace;fill:#fff" text-anchor="middle"><text x="330" y="92">1</text><text x="330" y="119">2</text><text x="330" y="144">3</text><text x="330" y="170">4</text></g>
+    <g class="tm"><text x="350" y="92">preset standar cetak</text><text x="350" y="119">tanda potong di sudut</text><text x="350" y="144">sama dengan bleed dokumen</text><text x="350" y="170">tidak ada RGB tersisa</text></g>
+  </svg><figcaption><b>Gambar 5.</b> Contoh pengaturan penting saat ekspor (tampilan dapat berbeda antar versi).</figcaption></figure>
+  <ol class="steps">
+    <li><b>File → Publish to PDF</b>. Simpan di folder khusus <code>CETAK</code>.</li>
+    <li>Klik <b>Settings</b>. Pada <b>PDF preset</b> pilih <b>PDF/X-1a</b> (bila tidak ada, pilih <i>Prepress</i> dan atur manual).</li>
+    <li>Tab <b>General</b>: Compatibility sesuai preset. Tab <b>Objects</b>: kompresi JPEG kualitas tinggi, jangan turunkan dpi di bawah 300 untuk brosur/poster.</li>
+    <li>Tab <b>Prepress</b>: centang <b>Crop marks</b> dan <b>Bleed limit</b> 3 mm. Pilih sesuai kebutuhan percetakan.</li>
+    <li>Tab <b>Color</b>: output semua warna sebagai CMYK.</li>
+    <li>Klik Save dan buka PDF di pembaca PDF untuk dicek (zoom 400%).</li>
+  </ol>
+
+  <h2>6 · Berkomunikasi dengan percetakan</h2>
+  <div class="grid">
+    <div><h4>Tanyakan sebelum desain</h4><p>Ukuran jadi, bleed, jenis dan berat kertas, finishing (laminasi, lipat), format file, batas ukuran file.</p></div>
+    <div><h4>Minta proof</h4><p>Untuk cetakan massal, minta cetak uji (proof) atau digital proof sebelum menyetujui produksi.</p></div>
+    <div><h4>Sepakati tenggat</h4><p>Tanggal terima file, tanggal selesai, biaya revisi.</p></div>
+  </div>
+
+  <h2>7 · Daftar periksa pra-cetak</h2>
+  <ul class="check">
+    <li>Ukuran dokumen = ukuran jadi, ditambah bleed 3 mm</li>
+    <li>Mode warna CMYK; tidak ada objek RGB atau warna terlalu neon</li>
+    <li>Total tinta ≤ 300%; teks kecil K100</li>
+    <li>Semua font dikonversi atau disematkan</li>
+    <li>Semua gambar ≥ 300 dpi pada ukuran akhir</li>
+    <li>Tidak ada objek tersembunyi/berlebih di luar halaman (kecuali bleed)</li>
+    <li>Teks dan logo di dalam safe zone</li>
+    <li>Crop marks dan bleed aktif pada PDF</li>
+    <li>Nama file jelas: <code>Brosur_RS_A4_v3_final.pdf</code></li>
+  </ul>
+  <p class="refs">Panduan resmi: <a href="https://product.corel.com/help/CorelDRAW/540229932/Main/EN/User-Guide/CorelDRAW-X7.pdf" target="_blank" rel="noopener">CorelDRAW X7 User Guide</a> (bagian “Printing” dan “Publishing to PDF”). Untuk standar PDF/X, tanyakan spesifikasi ke percetakan yang dipakai.</p>
+</section>
+
+<section data-tab="Latihan Sesi">
+  <h2>Rundown latihan (setelah teori, ±45 menit di lab)</h2>
+  <div class="tscroll"><table class="agenda">
+    <tr><th>Menit</th><th>Kegiatan</th></tr>
+    <tr><td>00–25</td><td>Latihan 1 · Audit pre-press berkasmu</td></tr>
+    <tr><td>25–35</td><td>Latihan 2–3 · Uji bleed &amp; convert to curves</td></tr>
+    <tr><td>35–45</td><td>Latihan 4–5 · Ekspor PDF dan kuis cari kesalahan</td></tr>
+  </table></div>
+  <h2>Tugas sesi pertemuan 7</h2>
+  <article class="task" data-id="audit" data-min="25"><h3>Latihan 1 · Audit pre-press berkasmu</h3>
+    <p>Buka draf poster (minggu 4) atau brosur (minggu 5). Periksa dengan daftar periksa di tab Teori. Untuk tiap butir tulis <b>LULUS</b> atau <b>GAGAL + perbaikan</b>.</p>
+    <textarea class="note" data-key="audit" placeholder="1. Ukuran: ..&#10;2. Mode warna: ..&#10;..."></textarea></article>
+  <article class="task" data-id="bleed" data-min="10"><h3>Latihan 2 · Uji bleed di simulator</h3>
+    <p>Dengan simulator mesin potong: (a) matikan bleed lalu geser potongan 1 mm, apa yang terjadi? (b) nyalakan bleed 3 mm dan geser 2 mm, apa yang terjadi? (c) tempatkan teks 2 mm dari tepi dan geser 2 mm. Catat temuan.</p>
+    <textarea class="note" data-key="bleed"></textarea></article>
+  <article class="task" data-id="curves" data-min="15"><h3>Latihan 3 · Convert to curves yang aman</h3>
+    <ol class="steps"><li>Simpan salinan <code>.cdr</code> dengan nama <code>_EDITABLE</code>.</li><li><kbd>Ctrl</kbd>+<kbd>A</kbd> lalu <kbd>Ctrl</kbd>+<kbd>Q</kbd>.</li><li>Simpan salinan lain bernama <code>_CETAK</code>.</li><li>Pindahkan file ke komputer lain atau ganti nama font untuk membuktikan tampilan tidak berubah.</li></ol></article>
+  <article class="task" data-id="pdf" data-min="15"><h3>Latihan 4 · Ekspor PDF/X-1a</h3>
+    <p>Ekspor berkas dengan crop marks dan bleed 3 mm. Buka PDF-nya dan ambil dua tangkapan layar: sudut dengan crop marks, dan info font (File → Properties → Fonts pada pembaca PDF).</p></article>
+  <article class="task" data-id="kuis" data-min="10"><h3>Latihan 5 · Cari kesalahan</h3>
+    <p>Kerjakan kuis “temukan kesalahan” pada tab Kuis. Diskusikan jawaban yang salah dengan teman.</p></article>
+  <article class="task" data-id="tanya" data-min="10"><h3>Latihan 6 · Surat pesanan cetak</h3>
+    <p>Tulis spesifikasi pesanan cetak untuk brosurmu (ukuran jadi, bleed, kertas, jumlah, finishing, format file, tenggat). Anggap kamu mengirim ke percetakan.</p>
+    <textarea class="note" data-key="tanya" placeholder="Ukuran:&#10;Bleed:&#10;Kertas:&#10;Jumlah:&#10;Finishing:&#10;Format file:&#10;Tenggat:"></textarea></article>
+</section>
+
+<section data-tab="Kuis">
+  <h2>Kuis: temukan kesalahan</h2>
+  <div class="quiz"><script type="application/json">[
+    {"q":"Berkas brosur memakai font Poppins dan tidak diubah ke kurva, lalu dikirim ke percetakan yang tidak punya Poppins. Masalah utama?","o":["Tidak ada, PDF otomatis aman","Font diganti dan tata letak bergeser","Warna berubah menjadi RGB","Bleed hilang"],"a":1,"e":"Font pengganti memiliki lebar berbeda. Convert to Curves atau embed font mencegahnya."},
+    {"q":"Latar biru berhenti tepat di garis potong, tanpa bleed. Setelah dipotong mesin yang meleset 1 mm, yang terlihat adalah…","o":["Garis putih tipis di tepi","Teks lebih tebal","Warna lebih gelap","Tidak ada masalah"],"a":0,"e":"Tanpa bleed, pergeseran sekecil apa pun menampakkan kertas putih."},
+    {"q":"Besar bleed standar yang umum diminta percetakan untuk brosur dan kartu adalah…","o":["0,1 mm","3 mm","30 mm","100 mm"],"a":1,"e":"3 mm adalah standar umum; konfirmasi ke percetakan."},
+    {"q":"Gambar 72 dpi pada ukuran jadi A4 untuk brosur sebaiknya…","o":["Dipakai saja","Diganti dengan gambar ≥ 300 dpi","Diperbesar dengan Resample","Diberi outline"],"a":1,"e":"Resample tidak menambah detail."},
+    {"q":"Setelah Convert to Curves, teks…","o":["Tetap bisa diedit sebagai teks","Menjadi objek vektor, tidak bisa diedit sebagai teks","Hilang","Menjadi bitmap"],"a":1,"e":"Karena itu simpan salinan editable."},
+    {"q":"Preset PDF yang dipilih untuk kiriman ke percetakan offset sesuai materi adalah…","o":["PDF for the Web","PDF/X-1a","Office","Draft"],"a":1,"e":"PDF/X-1a: CMYK, font tertanam, siap cetak."},
+    {"q":"Teks diletakkan 1 mm dari garis potong. Risiko terbesar?","o":["Tidak terbaca di layar","Terpotong saat pemotongan","Berubah warna","Hilang di PDF"],"a":1,"e":"Letakkan teks di safe zone 3–5 mm."},
+    {"q":"Crop marks sebaiknya ditempatkan…","o":["Di dalam area desain","Di luar area bleed","Di tengah halaman","Di atas logo"],"a":1,"e":"Agar tidak ikut tercetak pada hasil akhir."},
+    {"q":"Langkah yang benar sebelum mengirim ke percetakan massal adalah…","o":["Kirim langsung","Periksa, ekspor PDF, cek PDF-nya, minta proof","Hanya kirim .cdr","Ubah semua ke RGB"],"a":1,"e":"Selalu cek PDF akhir dan minta proof untuk produksi besar."}
+  ]</script></div>
+</section>
+
+</main>
+</body>
+</html>

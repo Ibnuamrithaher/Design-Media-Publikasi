@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Pertemuan 03</title>
+<link rel="stylesheet" href="assets/style.css">
+<script src="assets/app.js" defer></script>
+<script src="assets/widgets1.js" defer></script>
+<script src="assets/widgets2.js" defer></script>
+<script src="assets/widgets3.js" defer></script>
+</head>
+<body data-week="3" data-cpmk="1, 2" data-goal="Mampu menerapkan tipografi (klasifikasi, anatomi, spasi, kontras, font pairing) dan mengatur presisi milimeter pada dokumen stasioneri: ID card bolak-balik dan kartu nama.">
+<main>
+
+<section data-tab="Teori">
+  <h2>1 · Klasifikasi font</h2>
+  <div class="figs">
+    <figure class="fig" style="background:#f4f4f0;color:#111"><div style="padding:14px"><div style="font:700 56px/1 'Lora',serif">Rg</div><p style="font-family:'Lora';margin:6px 0 0;font-size:13px">Kait di ujung huruf. Formal, klasik, tepercaya. Bagus untuk teks panjang cetak.</p></div><figcaption><b>Serif</b> · Lora, Merriweather, Times</figcaption></figure>
+    <figure class="fig" style="background:#f4f4f0;color:#111"><div style="padding:14px"><div style="font:700 56px/1 'Montserrat',sans-serif">Rg</div><p style="font-family:'Montserrat';margin:6px 0 0;font-size:13px">Tanpa kait. Bersih, modern, terbaca baik di layar.</p></div><figcaption><b>Sans-serif</b> · Montserrat, Open Sans, Arial</figcaption></figure>
+    <figure class="fig" style="background:#f4f4f0;color:#111"><div style="padding:14px"><div style="font:700 56px/1 'Playfair Display',serif">Rg</div><p style="font-family:'Playfair Display';margin:6px 0 0;font-size:13px">Karakter kuat untuk judul besar, bukan paragraf.</p></div><figcaption><b>Display</b> · Playfair, Oswald</figcaption></figure>
+    <figure class="fig" style="background:#f4f4f0;color:#111"><div style="padding:14px"><div style="font:700 56px/1 'JetBrains Mono',monospace">Rg</div><p style="font-family:'JetBrains Mono';margin:6px 0 0;font-size:13px">Lebar huruf sama. Teknis, cocok untuk angka.</p></div><figcaption><b>Monospace</b> · JetBrains Mono, Courier</figcaption></figure>
+  </div>
+  <div class="callout w"><b class="t">Script / tulisan tangan</b>Menyerupai tulisan tangan, cocok untuk nama brand yang personal. Hindari untuk informasi medis, paragraf, dan huruf kapital semua karena sulit dibaca.</div>
+  <figure class="fig"><svg viewBox="0 0 540 170">
+    <text x="30" y="120" style="font:400 120px Georgia,'Times New Roman',serif;fill:#EAEAEA">R</text>
+    <text x="230" y="120" style="font:400 120px Arial,Helvetica,sans-serif;fill:#EAEAEA">R</text>
+    <circle cx="48" cy="118" r="14" class="sr" stroke-width="2"/><circle cx="106" cy="118" r="14" class="sr" stroke-width="2"/>
+    <text x="30" y="150" class="tr">SERIF = kait di ujung batang</text><text x="230" y="150" class="tr">SANS = ujung polos</text>
+    <path d="M330 40l-50 20M330 40h0" class="sd"/>
+    <text x="340" y="50" class="tm">sans serif lebih ramping</text><text x="340" y="66" class="tm">dan netral</text>
+  </svg><figcaption><b>Gambar 1.</b> Perbedaan serif dan sans-serif pada huruf R.</figcaption></figure>
+
+  <h2>2 · Anatomi huruf</h2>
+  <p>Mengenali bagian huruf membantu memilih font yang terbaca. Ubah font dan lihat bagaimana garis-garis ukurannya bergeser.</p>
+  <div class="widget" data-w="anatomy" data-title="ANATOMI HURUF"></div>
+  <ul><li><b>Baseline</b>: garis dasar tempat huruf “berdiri”.</li><li><b>x-height</b>: tinggi huruf kecil tanpa ascender. Semakin tinggi, semakin terbaca pada ukuran kecil.</li><li><b>Cap height</b>: tinggi huruf kapital.</li><li><b>Ascender / Descender</b>: bagian huruf yang naik (d, h) atau turun (p, g).</li></ul>
+
+  <h2>3 · Spasi: kerning, tracking, leading</h2>
+  <figure class="fig"><svg viewBox="0 0 540 210">
+    <text x="10" y="18" class="tr">KERNING · jarak sepasang huruf</text>
+    <text x="10" y="58" style="font:400 36px 'Archivo Black',Impact,sans-serif;fill:#EAEAEA;letter-spacing:6px">AVATAR</text>
+    <text x="10" y="72" class="tm">atas: celah huruf terlalu lebar</text>
+    <text x="10" y="108" style="font:400 36px 'Archivo Black',Impact,sans-serif;fill:#EAEAEA;letter-spacing:-1px">AVATAR</text>
+    <text x="10" y="122" class="tm">bawah: pasangan huruf dirapatkan</text>
+    <text x="10" y="150" class="tr">TRACKING · jarak seluruh huruf</text>
+    <text x="10" y="172" style="font:700 13px 'JetBrains Mono',monospace;fill:#EAEAEA;letter-spacing:5px">RUMAH SAKIT (+tracking)</text>
+    <text x="10" y="192" style="font:700 13px 'JetBrains Mono',monospace;fill:#EAEAEA;letter-spacing:0">RUMAH SAKIT (normal)</text>
+    <line x1="350" y1="8" x2="350" y2="200" class="sd"/>
+    <text x="364" y="18" class="tr">LEADING · antarbaris</text>
+    <g style="font:12px 'Open Sans',sans-serif;fill:#EAEAEA"><text x="364" y="42">Jam layanan poli</text><text x="364" y="53">Senin–Jumat pukul</text><text x="364" y="64">08.00 sampai 14.00</text>
+    <text x="364" y="112">Jam layanan poli</text><text x="364" y="134">Senin–Jumat pukul</text><text x="364" y="156">08.00 sampai 14.00</text></g>
+    <text x="364" y="82" class="tm">terlalu rapat</text><text x="364" y="176" class="tm">terlalu longgar</text>
+  </svg><figcaption><b>Gambar 2.</b> Tiga jenis spasi. Kerning mengatur pasangan huruf, tracking seluruh teks, leading antarbaris.</figcaption></figure>
+  <div class="widget" data-w="typesetter" data-title="LAB TATA TEKS (UKURAN · LEADING · TRACKING · LEBAR BARIS)"></div>
+  <div class="tscroll"><table>
+    <tr><th>Parameter</th><th>Nilai nyaman</th><th>Catatan</th></tr>
+    <tr><td>Ukuran teks cetak</td><td>9–11 pt (isi), ≥ 6 pt (keterangan terkecil)</td><td>Lansia: ≥ 12 pt</td></tr>
+    <tr><td>Leading</td><td>±120–150% ukuran huruf</td><td>Judul pendek boleh lebih rapat (90–110%)</td></tr>
+    <tr><td>Panjang baris</td><td>45–75 karakter</td><td>Kolom sempit = baris pendek</td></tr>
+    <tr><td>Tracking</td><td>0 untuk paragraf; +5–10% untuk huruf kapital kecil</td><td>Jangan rapatkan berlebihan</td></tr>
+  </table></div>
+
+  <h2>4 · Perataan dan hierarki teks</h2>
+  <figure class="fig"><svg viewBox="0 0 540 150">
+    <g class="fg"><rect x="10" y="20" width="110" height="6"/><rect x="10" y="32" width="90" height="6"/><rect x="10" y="44" width="110" height="6"/><rect x="10" y="56" width="70" height="6"/><rect x="10" y="68" width="100" height="6"/></g><text x="10" y="100" class="tr">RATA KIRI</text><text x="10" y="116" class="tm">paling terbaca; default</text>
+    <g class="fg"><rect x="160" y="20" width="110" height="6"/><rect x="160" y="32" width="110" height="6"/><rect x="160" y="44" width="110" height="6"/><rect x="160" y="56" width="110" height="6"/><rect x="160" y="68" width="110" height="6"/></g><text x="160" y="100" class="tr">RATA KIRI-KANAN</text><text x="160" y="116" class="tm">rapi, tetapi celah kata</text>
+    <g class="fg"><rect x="330" y="20" width="110" height="6" transform="translate(0 0)"/><rect x="340" y="32" width="90" height="6"/><rect x="330" y="44" width="110" height="6"/><rect x="350" y="56" width="70" height="6"/><rect x="335" y="68" width="100" height="6"/></g><text x="330" y="100" class="tr">RATA TENGAH</text><text x="330" y="116" class="tm">hanya judul pendek</text>
+  </svg><figcaption><b>Gambar 3.</b> Perataan paragraf. Pilih rata kiri untuk teks panjang berbahasa Indonesia.</figcaption></figure>
+  <div class="grid">
+    <div><h4>Tiga tingkat</h4><p>H1 (judul) → H2 (subjudul) → isi. Bedakan lewat <b>ukuran</b>, <b>weight</b>, atau <b>warna</b>, bukan ketiganya sekaligus.</p></div>
+    <div><h4>Rasio ukuran</h4><p>Tangga skala: 1 : 1,25 : 1,5 : 2 : 3. Contoh isi 10 pt → subjudul 14 pt → judul 24 pt.</p></div>
+    <div><h4>Satu perataan</h4><p>Pilih satu perataan per desain agar ada garis tepi yang konsisten.</p></div>
+  </div>
+
+  <h2>5 · Keterbacaan dan kontras</h2>
+  <p><b>Legibility</b> = huruf mudah dibedakan satu sama lain. <b>Readability</b> = teks mudah dibaca sebagai paragraf (ukuran, leading, panjang baris, kontras).</p>
+  <div class="widget" data-w="contrast" data-title="PENGUJI KONTRAS"></div>
+  <figure class="fig"><svg viewBox="0 0 540 110">
+    <rect x="10" y="10" width="120" height="60" style="fill:#0B5FA5"/><text x="20" y="46" style="font:700 16px sans-serif;fill:#fff">Putih/biru</text><text x="10" y="90" class="tr">8.0 : 1 LULUS</text>
+    <rect x="145" y="10" width="120" height="60" style="fill:#fff"/><text x="155" y="46" style="font:700 16px sans-serif;fill:#bbb">Abu/putih</text><text x="145" y="90" class="tr">1.9 : 1 GAGAL</text>
+    <rect x="280" y="10" width="120" height="60" style="fill:#111"/><text x="290" y="46" style="font:700 16px sans-serif;fill:#FFD400">Kuning/hitam</text><text x="280" y="90" class="tr">13.7 : 1 LULUS</text>
+    <rect x="415" y="10" width="120" height="60" style="fill:#1B9E3E"/><text x="425" y="46" style="font:700 16px sans-serif;fill:#E61919">Merah/hijau</text><text x="415" y="90" class="tr">1.1 : 1 GAGAL</text>
+  </svg><figcaption><b>Gambar 4.</b> Contoh pasangan warna teks–latar. Angka rasio berupa perkiraan; ukur sendiri dengan lab.</figcaption></figure>
+  <ul><li>Kontras teks biasa ≥ 4.5 : 1; teks besar ≥ 3 : 1.</li><li>Hindari teks semua huruf kapital untuk kalimat panjang.</li><li>Jangan memakai merah di atas hijau (sulit bagi buta warna merah-hijau).</li><li>Jangan menaruh teks di atas foto ramai tanpa bidang pelindung (overlay gelap/terang).</li></ul>
+
+  <h2>6 · Memadukan font (font pairing)</h2>
+  <div class="widget" data-w="pairing" data-title="LAB FONT PAIRING"></div>
+  <div class="figs">
+    <figure class="fig" style="background:#f4f4f0;color:#111"><div style="padding:14px"><div style="font:700 22px 'Playfair Display',serif">Klinik Gigi Ceria</div><p style="font:13px 'Open Sans',sans-serif;margin:6px 0 0">Senyum sehat dimulai dari pemeriksaan rutin.</p></div><figcaption>Playfair Display + Open Sans · elegan, tepercaya</figcaption></figure>
+    <figure class="fig" style="background:#f4f4f0;color:#111"><div style="padding:14px"><div style="font:700 22px 'Montserrat',sans-serif">Cek Kesehatan</div><p style="font:13px 'Lora',serif;margin:6px 0 0">Pemeriksaan tekanan darah dan gula darah gratis.</p></div><figcaption>Montserrat + Lora · modern, ramah</figcaption></figure>
+    <figure class="fig" style="background:#f4f4f0;color:#111"><div style="padding:14px"><div style="font:500 24px 'Oswald',sans-serif;text-transform:uppercase">Donor Darah</div><p style="font:13px 'Roboto',sans-serif;margin:6px 0 0">Setetes darahmu menyelamatkan nyawa.</p></div><figcaption>Oswald + Roboto · tegas, kampanye</figcaption></figure>
+  </div>
+  <div class="callout"><b class="t">Aturan</b>Maksimal 2 keluarga font. Beri kontras jelas lewat serif vs sans, atau ukuran dan weight. Jangan memadukan dua font mirip. Bila ragu, gunakan satu keluarga font dengan weight berbeda.</div>
+
+  <h2>7 · Ukuran standar dan presisi milimeter</h2>
+  <p>Dokumen stasioneri dicetak sesuai ukuran fisik, jadi satuan harus <b>milimeter</b>, bukan piksel.</p>
+  <div class="callout w"><b class="t">Dokumen stasioneri</b>Dokumen cetak untuk perlengkapan kantor dan identitas, misalnya kartu nama, ID card, kop surat, amplop, dan map.</div>
+  <p><b>Mengapa bukan piksel?</b> Piksel tidak punya ukuran fisik tetap. Ukurannya bergantung pada resolusi dan layar. Gambar 1000 px bisa tercetak selebar 8 cm pada 300 dpi, tetapi 35 cm pada 72 dpi. Milimeter selalu pasti: 85,6 mm di CorelDRAW akan tercetak 85,6 mm di kertas.</p>
+  <div class="callout"><b class="t">DPI (dots per inch)</b>Jumlah titik (piksel) per satu inci (2,54 cm) pada hasil cetak. Semakin tinggi DPI, semakin rapat titiknya dan semakin halus hasil cetaknya.<br>Rumus: <b>ukuran cetak (inci) = jumlah piksel ÷ DPI</b>.</div>
+  <div class="tscroll"><table>
+    <tr><th>DPI</th><th>Dipakai untuk</th></tr>
+    <tr><td>300</td><td>Standar cetak: kartu nama, ID card, brosur</td></tr>
+    <tr><td>150</td><td>Poster atau spanduk besar yang dilihat dari jauh</td></tr>
+    <tr><td>72 / 96</td><td>Layar. DPI tidak penting, yang dihitung hanya jumlah piksel</td></tr>
+  </table></div>
+  <p><b>Contoh:</b> foto ID card berukuran 25 × 35 mm (±1 × 1,4 inci) butuh minimal 300 × 420 px agar tajam pada 300 dpi. Menaikkan angka DPI di software tidak menambah ketajaman, jadi foto harus sudah punya piksel yang cukup sejak awal.</p>
+  <div class="widget" data-w="mm" data-title="UKURAN, BLEED, DAN KONVERSI"></div>
+  <figure class="fig"><svg viewBox="0 0 540 190">
+    <rect x="30" y="30" width="214" height="135" style="fill:#555;stroke:#EAEAEA" stroke-width="2"/>
+    <rect x="25" y="25" width="224" height="145" class="sr" stroke-dasharray="4 3"/>
+    <text x="30" y="20" class="tr">CR80 / ID card 85,6 × 54 mm</text>
+    <rect x="270" y="30" width="225" height="137" style="fill:none;stroke:#8C8C8C" stroke-dasharray="6 4" stroke-width="2"/>
+    <text x="270" y="20" class="tr">Kartu nama 90 × 55 mm</text>
+    <text x="270" y="184" class="tm">skala 2,5 px/mm · beda 4,4 × 1 mm</text>
+    <text x="30" y="188" class="tm">merah putus-putus = area bleed 2 mm</text>
+  </svg><figcaption><b>Gambar 5.</b> Perbandingan dua ukuran kartu yang sangat mirip. Konfirmasi ukuran ke percetakan sebelum mendesain.</figcaption></figure>
+  <div class="tscroll"><table>
+    <tr><th>Dokumen</th><th>Ukuran jadi</th><th>Catatan</th></tr>
+    <tr><td>ID card (CR80)</td><td>85,6 × 54 mm</td><td>Sama dengan kartu ATM; ujung membulat saat dicetak</td></tr>
+    <tr><td>Kartu nama</td><td>90 × 55 mm (umum di Indonesia)</td><td>Sebagian percetakan memakai 85 × 55</td></tr>
+    <tr><td>Ukuran huruf minimum cetak</td><td>±6 pt</td><td>Di bawah itu sulit dibaca, terutama untuk lansia</td></tr>
+    <tr><td>Bleed</td><td>2–3 mm</td><td>Untuk kartu kecil sering 2 mm</td></tr>
+    <tr><td>Safe margin</td><td>3 mm</td><td>Teks/logo tidak boleh melewati</td></tr>
+  </table></div>
+
+  <h2>8 · Guideline dan penggaris</h2>
+  <figure class="fig"><svg viewBox="0 0 540 190">
+    <rect x="40" y="30" width="460" height="150" class="bk" style="stroke:#8C8C8C"/>
+    <rect x="0" y="10" width="540" height="20" class="ln"/><rect x="0" y="10" width="40" height="170" class="ln"/>
+    <g class="tm"><text x="52" y="24">0</text><text x="150" y="24">20</text><text x="250" y="24">40</text><text x="350" y="24">60</text><text x="450" y="24">80</text></g>
+    <line x1="70" y1="10" x2="70" y2="180" class="sr" stroke-dasharray="5 3"/><line x1="470" y1="10" x2="470" y2="180" class="sr" stroke-dasharray="5 3"/>
+    <line x1="40" y1="52" x2="500" y2="52" class="sr" stroke-dasharray="5 3"/><line x1="40" y1="160" x2="500" y2="160" class="sr" stroke-dasharray="5 3"/>
+    <rect x="76" y="60" width="90" height="90" class="sk"/><text x="80" y="104" class="tm">foto</text>
+    <text x="75" y="46" class="tr">garis aman 3 mm dari tepi</text>
+    <path d="M10 30v140" class="sd"/><text x="2" y="108" class="tm" transform="rotate(-90 12 108)">penggaris vertikal</text>
+  </svg><figcaption><b>Gambar 6.</b> Guideline (garis merah putus-putus) ditarik dari penggaris dan dipakai sebagai batas aman serta garis sejajar.</figcaption></figure>
+  <ul><li>Tarik guideline dari penggaris atas (garis horizontal) atau kiri (vertikal).</li><li>Aktifkan <b>View → Snap to → Guidelines</b> agar objek menempel.</li><li>Kunci guideline agar tidak bergeser: klik kanan guideline → <b>Lock Object</b>.</li></ul>
+
+  <h2>9 · Teks di CorelDRAW</h2>
+  <div class="tscroll"><table>
+    <tr><th>Jenis</th><th>Cara membuat</th><th>Dipakai untuk</th></tr>
+    <tr><td>Artistic text</td><td>Text Tool (<kbd>F8</kbd>) → klik sekali</td><td>Judul, nama, label pendek</td></tr>
+    <tr><td>Paragraph text</td><td>Text Tool → klik-tarik membuat kotak</td><td>Paragraf; teks mengalir dalam kotak</td></tr>
+  </table></div>
+  <ul><li><b>Text Properties</b>: <kbd>Ctrl</kbd>+<kbd>T</kbd> (font, ukuran, leading, tracking, perataan).</li><li>Ukuran teks dalam <b>pt</b> (1 pt = 0,3528 mm).</li><li>Kerning manual: Shape Tool (<kbd>F10</kbd>) → tarik handle panah di antara huruf.</li><li><b>Convert to Curves</b> (<kbd>Ctrl</kbd>+<kbd>Q</kbd>) dibahas di pertemuan 7; jangan lakukan sebelum desain final.</li></ul>
+  <p class="refs">Bacaan: Lupton, E. (2014). <i>Thinking with Type</i> (bab “Letter”, “Text”). Cek kontras: <a href="https://webaim.org/resources/contrastchecker/" target="_blank" rel="noopener">webaim.org/resources/contrastchecker</a>. Font gratis: <a href="https://fonts.google.com" target="_blank" rel="noopener">fonts.google.com</a>.</p>
+</section>
+
+<section data-tab="Praktikum">
+  <h2>Target hasil</h2>
+  <figure class="fig"><svg viewBox="0 0 640 230">
+    <g transform="translate(20 28)">
+      <rect x="-9" y="-9" width="275" height="180" class="sr" stroke-dasharray="5 3"/><text x="-9" y="-14" class="tr">DEPAN · 85,6 × 54 mm (skala 3 px/mm)</text>
+      <rect x="0" y="0" width="257" height="162" style="fill:#0B5FA5"/>
+      <rect x="9" y="9" width="239" height="144" class="sd" stroke-dasharray="4 3"/>
+      <rect x="18" y="30" width="66" height="84" style="fill:#EAEAEA"/><text x="51" y="70" text-anchor="middle" style="font:10px monospace;fill:#0A0A0A">FOTO</text><text x="51" y="84" text-anchor="middle" style="font:9px monospace;fill:#0A0A0A">22×28 mm</text>
+      <text x="98" y="48" style="font:700 13px Montserrat,sans-serif;fill:#fff">NAMA PEGAWAI</text><text x="98" y="66" style="font:11px 'Open Sans',sans-serif;fill:#fff">Perawat Pelaksana</text><text x="98" y="86" style="font:10px 'JetBrains Mono',monospace;fill:#fff">NIP 1990 0000 0001</text>
+      <path d="M205 22h14v10h10v14h-10v10h-14V46h-10V32h10z" style="fill:#fff" transform="translate(0 78)"/>
+      <text x="98" y="140" style="font:9px monospace;fill:#cde">RS SEHAT SENTOSA</text>
+    </g>
+    <g transform="translate(335 28)">
+      <rect x="-9" y="-9" width="275" height="180" class="sr" stroke-dasharray="5 3"/><text x="-9" y="-14" class="tr">BELAKANG</text>
+      <rect x="0" y="0" width="257" height="162" style="fill:#EAEAEA"/>
+      <rect x="9" y="9" width="239" height="144" style="fill:none;stroke:#999;stroke-dasharray:4 3"/>
+      <text x="18" y="34" style="font:9px 'Open Sans',sans-serif;fill:#111">Kartu ini milik RS Sehat Sentosa.</text><text x="18" y="48" style="font:9px 'Open Sans',sans-serif;fill:#111">Bila ditemukan hubungi (021) 000-000.</text>
+      <rect x="18" y="62" width="120" height="36" style="fill:#111"/><text x="78" y="84" text-anchor="middle" style="font:10px monospace;fill:#fff">BARCODE 40×12</text>
+      <rect x="18" y="116" width="90" height="24" class="sd" style="fill:none;stroke:#555"/><text x="63" y="131" text-anchor="middle" style="font:8px monospace;fill:#555">tanda tangan 30×8 mm</text>
+    </g>
+  </svg><figcaption><b>Gambar 7.</b> Rancangan ID card. Garis merah putus-putus = bleed; garis abu putus-putus = batas aman 3 mm.</figcaption></figure>
+
+  <h2>A · Set-up halaman</h2>
+  <ol class="steps">
+    <li><kbd>Ctrl</kbd>+<kbd>N</kbd>. Pilih CMYK, mm, 300 dpi.</li>
+    <li>Atur ukuran halaman <b>85.6 × 54 mm</b> (landscape) lewat Property Bar atau <b>Layout → Page Setup</b>.</li>
+    <li>Di <b>Layout → Page Setup → Page Size</b> isi <b>Bleed = 3 mm</b> dan centang <i>Show bleed area</i>.</li>
+    <li>Tambah halaman kedua: <b>Layout → Insert Page</b> (atau tanda + di tab halaman bawah). Pastikan ukurannya sama.</li>
+    <li>Beri nama halaman: klik kanan tab → Rename → <code>Depan</code>, <code>Belakang</code>.</li>
+  </ol>
+  <div class="callout w"><b class="t">Checkpoint A</b>Garis bleed terlihat mengelilingi halaman; dua tab halaman bernama Depan dan Belakang.</div>
+
+  <h2>B · Guideline presisi</h2>
+  <ol class="steps">
+    <li>Tampilkan penggaris (<b>View → Rulers</b>), lalu tarik guideline dari penggaris.</li>
+    <li>Atur posisi tepat: pilih guideline lalu buka <b>Object Properties</b> (<kbd>Alt</kbd>+<kbd>Enter</kbd>) atau ketik posisi di Property Bar bila tersedia. Buat guideline vertikal di <b>3 mm</b> dan <b>82.6 mm</b>, horizontal di <b>3 mm</b> dan <b>51 mm</b>.</li>
+    <li>Aktifkan <b>View → Snap to → Guidelines</b>.</li>
+    <li>Kunci guideline agar tidak tergeser.</li>
+  </ol>
+
+  <h2>C · Sisi depan</h2>
+  <ol class="steps">
+    <li>Latar: persegi panjang <b>92.6 × 60 mm</b> (menutup bleed), posisi tengah (<kbd>P</kbd>), warna biru RS C100 M60 Y0 K0. Kunci: klik kanan → <b>Lock Object</b>.</li>
+    <li>Kotak foto <b>22 × 28 mm</b> di kiri dalam guideline. Beri outline putih 0,5 pt.</li>
+    <li>Teks nama (<kbd>F8</kbd>): font judul <b>Montserrat Bold 10 pt</b>, putih. Jabatan: <b>Open Sans 7 pt</b>.</li>
+    <li>Nomor pegawai pakai font monospace 6,5 pt supaya angka rapi.</li>
+    <li>Logo RS (hasil latihan minggu 2) di kanan atas, tinggi 10 mm.</li>
+    <li>Cek kontras teks putih di atas biru ≥ 4.5 : 1 (lab penguji kontras di tab Teori).</li>
+  </ol>
+  <div class="callout w"><b class="t">Checkpoint C</b>Semua elemen di dalam garis aman; hierarki nama &gt; jabatan &gt; NIP terlihat jelas pada tampilan zoom-out.</div>
+
+  <h2>D · Sisi belakang</h2>
+  <ol class="steps">
+    <li>Salin latar dari depan (<kbd>Ctrl</kbd>+<kbd>C</kbd>, pindah halaman, <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>V</kbd> atau Paste) dan ubah warna jadi putih/abu muda; pusatkan dengan <kbd>P</kbd>.</li>
+    <li>Kotak barcode 40 × 12 mm dan teks “Kartu ini milik RS … Bila ditemukan hubungi …” minimal 6 pt.</li>
+    <li>Kolom tanda tangan 30 × 8 mm. Beri garis tipis 0,25 pt.</li>
+  </ol>
+
+  <h2>E · Cek akurasi</h2>
+  <ol class="steps">
+    <li>Pilih tiap elemen penting, baca W/H/X/Y di Property Bar, bandingkan dengan rencana.</li>
+    <li>Apakah ada teks yang menyentuh guideline aman? Geser ke dalam.</li>
+    <li>Zoom-out (<kbd>F4</kbd>) lalu sipitkan mata: nama terbaca paling dulu?</li>
+    <li>Tidak lebih dari 2 keluarga font.</li>
+  </ol>
+
+  <h2>F · Ekspor dan kumpul</h2>
+  <ol class="steps">
+    <li>Simpan <code>.cdr</code>.</li>
+    <li><b>File → Publish to PDF</b>; simpan <code>NIM_Nama_IDCard.pdf</code>.</li>
+  </ol>
+  <div class="callout"><b class="t">Tip</b>Mengetik angka di Property Bar jauh lebih presisi daripada menarik dengan mouse. Gunakan <kbd>Tab</kbd> berpindah kolom dan <kbd>Enter</kbd> mengesahkan.</div>
+
+  <h2>Praktikum lanjutan · Kop surat A4 RS Sehat Sentosa</h2>
+  <p>Studi kasus kedua memakai materi yang sama (milimeter, guideline, tipografi, kontras, font pairing) pada dokumen stasioneri lain: <b>kop surat resmi</b> yang dicetak di printer kantor. Bedanya dengan ID card: ada teks paragraf panjang, jadi leading dan panjang baris ikut dinilai.</p>
+  <figure class="fig"><svg viewBox="0 0 640 400">
+    <text x="20" y="18" class="tr">KOP SURAT A4 · 210 × 297 mm (skala 1,2 px/mm)</text>
+    <g transform="translate(20 28)">
+      <rect x="0" y="0" width="252" height="356" style="fill:#fff;stroke:#8C8C8C"/>
+      <rect x="30" y="18" width="180" height="320" class="sr" stroke-dasharray="5 3"/>
+      <rect x="30" y="18" width="18" height="18" style="fill:#0B5FA5"/><path d="M36 27h6M39 24v6" style="stroke:#fff;stroke-width:2"/>
+      <text x="54" y="29" style="font:700 10px Montserrat,sans-serif;fill:#0B3A66">RS SEHAT SENTOSA</text>
+      <text x="54" y="38" style="font:6px 'Open Sans',sans-serif;fill:#444">Jl. Contoh No. 1, Kota Contoh 12345</text>
+      <text x="54" y="46" style="font:6px 'Open Sans',sans-serif;fill:#444">Telp. (021) 000-000</text>
+      <line x1="30" y1="54" x2="210" y2="54" style="stroke:#0B5FA5;stroke-width:1"/>
+      <g style="fill:#bbb">
+        <rect x="30" y="70" width="70" height="4"/><rect x="30" y="80" width="90" height="4"/>
+        <rect x="30" y="98" width="110" height="4"/>
+        <rect x="30" y="114" width="180" height="3"/><rect x="30" y="122" width="180" height="3"/><rect x="30" y="130" width="180" height="3"/><rect x="30" y="138" width="180" height="3"/><rect x="30" y="146" width="120" height="3"/>
+        <rect x="30" y="162" width="180" height="3"/><rect x="30" y="170" width="180" height="3"/><rect x="30" y="178" width="180" height="3"/><rect x="30" y="186" width="90" height="3"/>
+        <rect x="30" y="204" width="60" height="3"/>
+        <rect x="140" y="250" width="70" height="3"/><rect x="140" y="290" width="70" height="3"/>
+      </g>
+      <line x1="30" y1="330" x2="210" y2="330" style="stroke:#bbb;stroke-width:.5"/>
+      <text x="30" y="338" style="font:5px 'Open Sans',sans-serif;fill:#444">(021) 000-000 · info@sehatsentosa.id · www.sehatsentosa.id</text>
+    </g>
+    <g class="tx">
+      <line x1="272" y1="64" x2="320" y2="64" class="sd"/><text x="326" y="68">Kop: logo tinggi 15 mm + nama RS</text><text x="326" y="82" class="tm">Montserrat Bold 16 pt · alamat Open Sans 8 pt</text>
+      <line x1="272" y1="82" x2="310" y2="112" class="sd"/><text x="326" y="116">Garis pemisah 0,5 pt di 45 mm</text>
+      <line x1="272" y1="190" x2="320" y2="190" class="sd"/><text x="326" y="194">Isi surat lebar 150 mm</text><text x="326" y="208" class="tm">Open Sans 11 pt · leading ±140% · rata kiri</text><text x="326" y="222" class="tm">45–75 karakter per baris</text>
+      <line x1="272" y1="352" x2="320" y2="352" class="sd"/><text x="326" y="356">Footer di 282 mm</text><text x="326" y="370" class="tm">Open Sans 7 pt · abu gelap kontras ≥ 4.5 : 1</text>
+      <text x="326" y="270" class="tr">Margin: atas 15 · bawah 15</text><text x="326" y="284" class="tr">kiri 25 · kanan 35 mm</text>
+      <text x="326" y="300" class="tm">garis merah putus-putus = batas margin</text>
+    </g>
+  </svg><figcaption><b>Gambar 8.</b> Target hasil kop surat A4. Elemen berada di dalam margin, hierarki nama RS &gt; alamat jelas, blok isi tidak melebihi 150 mm.</figcaption></figure>
+  <div class="tscroll"><table>
+    <tr><th>Bagian</th><th>Ukuran</th><th>Aturan</th></tr>
+    <tr><td>Halaman</td><td>A4, 210 × 297 mm (portrait)</td><td>Tanpa bleed karena dicetak di printer kantor</td></tr>
+    <tr><td>Margin</td><td>Atas 15, bawah 15, kiri 25, kanan 35 mm</td><td>Printer tidak bisa mencetak sampai tepi kertas</td></tr>
+    <tr><td>Area kop</td><td>Tinggi 30 mm dari margin atas</td><td>Logo, nama RS, alamat, garis pemisah</td></tr>
+    <tr><td>Isi surat</td><td>Lebar 150 mm</td><td>Font 11 pt, leading ±140%, rata kiri</td></tr>
+    <tr><td>Footer</td><td>Tinggi 10 mm</td><td>Telepon, email, situs; font 7 pt</td></tr>
+  </table></div>
+
+  <h2>G · Set-up dan guideline</h2>
+  <ol class="steps">
+    <li><kbd>Ctrl</kbd>+<kbd>N</kbd>. Pilih CMYK, mm, 300 dpi, ukuran <b>A4 portrait</b>, bleed 0 mm.</li>
+    <li>Buat guideline vertikal di <b>25 mm</b> dan <b>175 mm</b>, horizontal di <b>15 mm</b>, <b>45 mm</b> (batas bawah kop), dan <b>282 mm</b>.</li>
+    <li>Aktifkan <b>View → Snap to → Guidelines</b>, lalu kunci semua guideline.</li>
+  </ol>
+
+  <h2>H · Kop surat</h2>
+  <ol class="steps">
+    <li>Tempatkan logo RS (hasil latihan minggu 2) di kiri atas pada guideline, tinggi <b>15 mm</b>.</li>
+    <li>Nama RS: <b>Montserrat Bold 16 pt</b>, warna biru tua. Alamat dan telepon: <b>Open Sans 8 pt</b>, abu gelap.</li>
+    <li>Garis pemisah <b>0,5 pt</b> melintang tepat di guideline 45 mm.</li>
+    <li>Cek kontras warna teks terhadap putih ≥ 4.5 : 1 (lab penguji kontras di tab Teori). Catat HEX yang dipakai.</li>
+  </ol>
+  <div class="callout w"><b class="t">Checkpoint H</b>Logo dan teks kop sejajar guideline kiri 25 mm; hierarki nama RS &gt; alamat terlihat jelas pada zoom-out.</div>
+
+  <h2>I · Isi surat dan footer</h2>
+  <ol class="steps">
+    <li>Buat <b>Paragraph text</b> (<kbd>F8</kbd>, klik-tarik) selebar <b>150 mm</b> di antara guideline 25 dan 175 mm. Isi dengan surat contoh: nomor, perihal, salam, dua paragraf, penutup.</li>
+    <li>Atur <b>Open Sans 11 pt</b>, rata kiri, leading ±140% lewat <kbd>Ctrl</kbd>+<kbd>T</kbd>. Hitung jumlah karakter satu baris: harus <b>45–75</b>. Jika lebih, perbesar font atau persempit kotak.</li>
+    <li>Footer di guideline 282 mm: telepon, email, situs dengan <b>Open Sans 7 pt</b>. Boleh dua kolom bila muat.</li>
+    <li>Maksimal <b>2 keluarga font</b> pada seluruh halaman.</li>
+  </ol>
+
+  <h2>J · Cek dan kumpul</h2>
+  <ol class="steps">
+    <li>Pilih tiap blok, baca X/Y dan W/H di Property Bar, bandingkan dengan tabel ukuran.</li>
+    <li>Pastikan tidak ada teks melewati margin. Cetak uji skala 100% di printer kantor, lalu ukur dengan penggaris: lebar isi harus 150 mm.</li>
+    <li>Simpan <code>.cdr</code> dan <b>Publish to PDF</b> dengan nama <code>NIM_Nama_KopSurat.pdf</code>.</li>
+  </ol>
+  <div class="callout"><b class="t">Tip</b>Simpan kop sebagai template: <b>File → Save As Template</b>. Surat berikutnya tinggal mengganti isi, tanpa mengatur ulang margin dan guideline.</div>
+
+  <h2>Masalah umum</h2>
+  <div class="tscroll"><table>
+    <tr><th>Gejala</th><th>Solusi</th></tr>
+    <tr><td>Hasil cetak kop surat terpotong di tepi</td><td>Margin terlalu kecil. Pertahankan minimal 5 mm dari tepi kertas dan cetak skala 100%, bukan <i>fit to page</i>.</td></tr>
+    <tr><td>Teks berubah font setelah dibuka di komputer lain</td><td>Font tidak terpasang; dibahas di pertemuan 7. Sementara pakai font yang ada di lab.</td></tr>
+    <tr><td>Objek tidak menempel pada guideline</td><td>Aktifkan Snap to Guidelines.</td></tr>
+    <tr><td>Foto placeholder berubah ukuran saat diketik</td><td>Matikan kunci proporsi atau ketik W lalu H.</td></tr>
+    <tr><td>Bleed tidak terlihat</td><td>Centang Show bleed area di Page Setup.</td></tr>
+  </table></div>
+</section>
+
+<section data-tab="Latihan Sesi">
+  <h2>Tugas sesi pertemuan 3</h2>
+  <article class="task" data-id="anatomi" data-min="6"><h3>Latihan 1 · Ukur dua font</h3>
+    <p>Di lab anatomi, bandingkan Georgia dan Montserrat pada ukuran 160. Catat: font mana yang x-height-nya lebih tinggi? Mana yang lebih cocok untuk teks 6 pt? Tulis alasanmu dalam 2 kalimat.</p>
+    <textarea class="note" data-key="anatomi" placeholder="Jawabanmu"></textarea></article>
+  <article class="task" data-id="tata" data-min="8"><h3>Latihan 2 · Atur paragraf nyaman</h3>
+    <p>Di lab tata teks, temukan pengaturan font, ukuran, leading, dan lebar yang membuat paragraf paling nyaman dibaca untuk (a) brosur pasien lansia, (b) ID card. Catat nilainya.</p>
+    <textarea class="note" data-key="tata"></textarea></article>
+  <article class="task" data-id="kontras" data-min="8"><h3>Latihan 3 · Perbaiki kombinasi warna</h3>
+    <p>Gunakan penguji kontras. Temukan 3 pasang warna dengan rasio ≥ 4.5 yang cocok sebagai warna brand rumah sakit. Catat kode HEX-nya.</p>
+    <textarea class="note" data-key="kontras" placeholder="HEX teks / HEX latar / rasio"></textarea></article>
+  <article class="task" data-id="pair" data-min="8"><h3>Latihan 4 · Tiga pasangan font</h3>
+    <p>Pilih 3 pasangan font di lab pairing yang menurutmu cocok untuk (a) klinik anak, (b) rumah sakit bedah, (c) kampanye kesehatan remaja. Jelaskan alasannya satu kalimat tiap pasangan.</p>
+    <textarea class="note" data-key="pair"></textarea></article>
+  <article class="task" data-id="id" data-min="45"><h3>Latihan 5 · ID card bolak-balik</h3>
+    <p>Selesaikan praktikum A–F. Kumpulkan <code>.cdr</code> dan PDF.</p>
+    <details><summary>Rubrik</summary><ul><li>Ukuran 85,6 × 54 mm dan bleed 3 mm tepat (30%)</li><li>Teks tidak menyentuh batas aman (20%)</li><li>Font pairing sesuai aturan (25%)</li><li>Kontras dan keterbacaan (25%)</li></ul></details></article>
+  <article class="task" data-id="kop" data-min="40"><h3>Latihan 6 · Kop surat A4</h3>
+    <p>Selesaikan praktikum lanjutan G–J. Kumpulkan <code>.cdr</code> dan PDF.</p>
+    <details><summary>Rubrik</summary><ul><li>Ukuran A4, margin, dan guideline tepat (25%)</li><li>Isi surat 45–75 karakter per baris, leading nyaman (25%)</li><li>Font pairing maksimal 2 keluarga (25%)</li><li>Kontras dan hierarki kop (25%)</li></ul></details></article>
+  <article class="task" data-id="nama" data-min="25"><h3>Latihan 7 · Bonus: kartu nama dokter (dilanjutkan di rumah)</h3>
+    <p>Buat kartu nama 90 × 55 mm dengan nama, spesialisasi, jadwal praktik, dan nomor telepon. Tantangan: hierarki tegas, hanya 2 font, ukuran terkecil 6 pt.</p></article>
+</section>
+
+<section data-tab="Kuis">
+  <h2>Kuis</h2>
+  <div class="quiz"><script type="application/json">[
+    {"q":"Bagian huruf yang menentukan keterbacaan pada ukuran kecil dan sering disebut “tinggi badan huruf kecil” adalah…","o":["Ascender","x-height","Descender","Serif"],"a":1,"e":"x-height tinggi membuat huruf kecil tetap terbaca."},
+    {"q":"Berapa rasio kontras minimum yang disarankan untuk teks biasa?","o":["1.5 : 1","3 : 1","4.5 : 1","20 : 1"],"a":2,"e":"WCAG AA untuk teks biasa adalah 4.5:1."},
+    {"q":"Ukuran standar ID card (CR80) adalah…","o":["100 × 70 mm","85,6 × 54 mm","210 × 297 mm","148 × 105 mm"],"a":1,"e":"Sama dengan kartu ATM."},
+    {"q":"Pasangan font yang kontrasnya paling jelas adalah…","o":["Dua font sans yang mirip","Serif untuk judul + sans untuk isi","Tiga font script","Dua font display"],"a":1,"e":"Serif + sans adalah kombinasi klasik."},
+    {"q":"Batas aman (safe margin) berfungsi untuk…","o":["Menghemat tinta","Mencegah teks/logo terpotong saat pemotongan","Memperbesar font","Mengganti bleed"],"a":1,"e":"Elemen penting diletakkan di dalam batas aman."},
+    {"q":"Jarak antarbaris teks disebut…","o":["Kerning","Tracking","Leading","Baseline"],"a":2,"e":"Leading; kerning untuk sepasang huruf; tracking untuk seluruh teks."},
+    {"q":"Panjang baris yang nyaman untuk paragraf adalah sekitar…","o":["10–20 karakter","45–75 karakter","120–150 karakter","Tidak berpengaruh"],"a":1,"e":"Terlalu pendek atau panjang melelahkan mata."},
+    {"q":"Perataan paragraf yang paling terbaca untuk teks panjang adalah…","o":["Rata tengah","Rata kiri","Rata kanan","Acak"],"a":1,"e":"Rata kiri memberi awal baris yang konsisten."},
+    {"q":"Satuan ukuran huruf yang dipakai di CorelDRAW untuk teks cetak adalah…","o":["px","pt","em saja","rem"],"a":1,"e":"1 pt = 0,3528 mm."},
+    {"q":"Untuk membuat teks mengalir dalam kotak, gunakan…","o":["Artistic text","Paragraph text (klik-tarik)","Convert to curves","Weld"],"a":1,"e":"Paragraph text membuat teks mengikuti lebar kotak."}
+  ]</script></div>
+</section>
+
+</main>
+</body>
+</html>

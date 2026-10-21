@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Pertemuan 04</title>
+<link rel="stylesheet" href="assets/style.css">
+<script src="assets/app.js" defer></script>
+<script src="assets/widgets1.js" defer></script>
+<script src="assets/widgets2.js" defer></script>
+<script src="assets/widgets3.js" defer></script>
+</head>
+<body data-week="4" data-cpmk="3" data-goal="Mampu mendesain poster publikasi cetak dengan hierarki yang jelas (focal point, pola baca) dan menjiplak sketsa manual menjadi vektor memakai Pen Tool dengan node efisien.">
+<main>
+
+<section data-tab="Teori">
+  <h2>Rundown teori 45 menit</h2>
+  <div class="tscroll"><table class="agenda">
+    <tr><th>Menit</th><th>Kegiatan</th><th>Bagian</th></tr>
+    <tr><td>00–05</td><td>Review ikon minggu 2–3, tujuan hari ini</td><td>—</td></tr>
+    <tr><td>05–15</td><td>Hierarki visual, focal point, pola baca</td><td>1–2</td></tr>
+    <tr><td>15–23</td><td>Anatomi poster dan bedah kasus iklan cetak</td><td>3–4</td></tr>
+    <tr><td>23–35</td><td>Pen Tool: node, handle, jiplak sketsa (lab Bezier)</td><td>5–6</td></tr>
+    <tr><td>35–42</td><td>Outline, warna isi, dan urutan objek</td><td>7</td></tr>
+    <tr><td>42–45</td><td>Briefing praktikum</td><td>—</td></tr>
+  </table></div>
+
+  <h2>1 · Hierarki visual dan focal point</h2>
+  <p>Poster dibaca dalam hitungan detik. Mata harus tahu <b>apa yang dibaca pertama, kedua, ketiga</b>. Urutan dibentuk lewat ukuran, kontras, warna, posisi, dan ruang kosong.</p>
+  <div class="widget" data-w="hierarchy" data-title="LAB HIERARKI POSTER"></div>
+
+  <h2>2 · Pola baca dan komposisi</h2>
+  <figure class="fig"><svg viewBox="0 0 540 205">
+    <rect x="10" y="10" width="150" height="160" class="sk"/>
+    <path d="M28 30H142L28 150H142" class="sr" stroke-width="2"/><path d="M134 144l8 6-8 6" class="sr" stroke-width="2"/>
+    <g class="rd"><circle cx="28" cy="30" r="8"/><circle cx="142" cy="30" r="8"/><circle cx="28" cy="150" r="8"/><circle cx="142" cy="150" r="8"/></g>
+    <g style="font:700 10px monospace;fill:#fff" text-anchor="middle"><text x="28" y="34">1</text><text x="142" y="34">2</text><text x="28" y="154">3</text><text x="142" y="154">4</text></g>
+    <text x="10" y="190" class="tr">POLA Z</text><text x="62" y="190" class="tm">poster ringan</text>
+    <rect x="190" y="10" width="150" height="160" class="sk"/>
+    <g class="fg"><rect x="204" y="26" width="122" height="8"/><rect x="204" y="48" width="86" height="8"/><rect x="204" y="70" width="40" height="6" class="dm"/><rect x="204" y="86" width="34" height="6" class="dm"/><rect x="204" y="102" width="46" height="6" class="dm"/><rect x="204" y="118" width="30" height="6" class="dm"/></g>
+    <line x1="198" y1="22" x2="198" y2="150" class="sr" stroke-width="2"/>
+    <text x="190" y="190" class="tr">POLA F</text><text x="240" y="190" class="tm">teks lebih banyak</text>
+    <rect x="370" y="10" width="150" height="160" class="sk"/>
+    <g class="sd"><line x1="420" y1="10" x2="420" y2="170"/><line x1="470" y1="10" x2="470" y2="170"/><line x1="370" y1="63" x2="520" y2="63"/><line x1="370" y1="117" x2="520" y2="117"/></g>
+    <circle cx="420" cy="63" r="14" class="rd"/><rect x="466" y="113" width="8" height="8" class="fg"/>
+    <text x="370" y="190" class="tr">SEPERTIGA</text><text x="446" y="190" class="tm">fokus di titik</text>
+  </svg><figcaption><b>Gambar 1.</b> Tiga pola komposisi. Z untuk poster ringan (logo → visual → CTA); F untuk poster berteks; aturan sepertiga menempatkan fokus pada pertemuan garis.</figcaption></figure>
+  <div class="grid">
+    <div><h4>Pola Z</h4><p>Mata bergerak kiri-atas → kanan-atas → diagonal → kanan-bawah. Letakkan logo atas, visual tengah, CTA kanan bawah.</p></div>
+    <div><h4>Pola F</h4><p>Untuk teks lebih banyak: baca baris atas, lalu turun sambil memindai sisi kiri. Taruh kata kunci di awal baris.</p></div>
+    <div><h4>Aturan sepertiga</h4><p>Bagi bidang jadi 3×3. Titik pertemuan adalah posisi kuat untuk focal point.</p></div>
+    <div><h4>Ruang kosong</h4><p>Beri ≥ 10% area kosong. Poster yang penuh sesak tidak punya focal point.</p></div>
+  </div>
+
+  <h2>3 · Anatomi poster informasi</h2>
+  <figure class="fig"><svg viewBox="0 0 540 230">
+    <rect x="20" y="10" width="150" height="210" class="sk"/>
+    <rect x="30" y="20" width="130" height="26" class="fg"/>
+    <rect x="30" y="56" width="130" height="70" class="dm"/><path d="M80 90h20v-14h14v-14h-14v-14h-20v14h-14v14h14z" class="rd" transform="translate(5 18)"/>
+    <rect x="30" y="136" width="100" height="5" class="fg"/><rect x="30" y="146" width="120" height="5" class="dm"/><rect x="30" y="156" width="90" height="5" class="dm"/>
+    <rect x="30" y="180" width="80" height="18" class="rd"/><rect x="120" y="180" width="40" height="18" class="sk"/>
+    <g class="rd"><circle cx="196" cy="33" r="9"/><circle cx="196" cy="91" r="9"/><circle cx="196" cy="148" r="9"/><circle cx="196" cy="189" r="9"/><circle cx="196" cy="209" r="9"/></g>
+    <g style="font:700 10px monospace;fill:#fff" text-anchor="middle"><text x="196" y="37">1</text><text x="196" y="95">2</text><text x="196" y="152">3</text><text x="196" y="193">4</text><text x="196" y="213">5</text></g>
+    <g class="tx"><text x="214" y="37">Headline: menghentikan mata (≤ 7 kata)</text><text x="214" y="95">Visual utama: mendukung pesan</text><text x="214" y="152">Info penting: kapan, di mana, siapa</text><text x="214" y="193">Call to action: apa yang harus dilakukan</text><text x="214" y="213">Identitas: logo dan kontak RS</text></g>
+    <path d="M170 33h18M170 91h18M170 148h18M110 189h78M160 209h28" class="sd"/>
+  </svg><figcaption><b>Gambar 2.</b> Lima elemen poster informasi. Urutan nomor juga urutan prioritas ukuran.</figcaption></figure>
+  <div class="tscroll"><table>
+    <tr><th>Ukuran poster</th><th>mm</th><th>Pemakaian</th></tr>
+    <tr><td>A4</td><td>210 × 297</td><td>Pengumuman dalam ruangan</td></tr>
+    <tr><td>A3</td><td>297 × 420</td><td>Mading, lobi, poli</td></tr>
+    <tr><td>A2</td><td>420 × 594</td><td>Poster kampanye, ruang tunggu</td></tr>
+    <tr><td>A1</td><td>594 × 841</td><td>Poster besar, pameran</td></tr>
+  </table></div>
+
+  <h2>4 · Bedah kasus media cetak komersial</h2>
+  <div class="tscroll"><table>
+    <tr><th>Jenis iklan</th><th>Cara membangun hierarki</th><th>Pelajaran untuk poster RS</th></tr>
+    <tr><td>Promo makanan cepat saji</td><td>Foto produk besar, harga sangat besar, info syarat kecil</td><td>Satu angka/penawaran jadi pusat (mis. “GRATIS”)</td></tr>
+    <tr><td>Layanan telekomunikasi</td><td>Warna merek dominan, satu kalimat besar, tombol CTA</td><td>Warna merek konsisten, satu pesan</td></tr>
+    <tr><td>Kampanye layanan masyarakat</td><td>Gambar emosional, tagline pendek, logo penyelenggara kecil</td><td>Visual emosional + ajakan jelas</td></tr>
+  </table></div>
+  <div class="callout w"><b class="t">Tugas pengamatan</b>Cari satu poster komersial di sekitar kampus. Tentukan: apa fokusnya, pola baca (Z/F), dan elemen mana yang tidak perlu. Dibahas 3 menit di kelas.</div>
+
+  <h2>5 · Menjiplak sketsa (tracing) dengan Pen Tool</h2>
+  <p>Sketsa tangan di kertas diubah menjadi kurva vektor. Hasilnya tajam, dapat diwarnai, dan dapat diperbesar.</p>
+  <figure class="fig"><svg viewBox="0 0 540 170">
+    <g><text x="10" y="16" class="tr">1 · KLIK = node sudut</text>
+    <path d="M30 130L80 50L130 110L150 40" class="sk" stroke-width="2"/>
+    <g class="fg"><rect x="25" y="125" width="10" height="10"/><rect x="75" y="45" width="10" height="10"/><rect x="125" y="105" width="10" height="10"/><rect x="145" y="35" width="10" height="10"/></g>
+    <text x="10" y="156" class="tm">garis lurus antar node</text></g>
+    <g transform="translate(180 0)"><text x="10" y="16" class="tr">2 · KLIK + TARIK = kurva</text>
+    <path d="M25 120C60 20 120 20 150 110" class="sk" stroke-width="2"/>
+    <line x1="25" y1="120" x2="55" y2="50" class="sr"/><line x1="150" y1="110" x2="120" y2="42" class="sr"/><circle cx="55" cy="50" r="4" class="rd"/><circle cx="120" cy="42" r="4" class="rd"/>
+    <g class="fg"><rect x="20" y="115" width="10" height="10"/><rect x="145" y="105" width="10" height="10"/></g>
+    <text x="10" y="156" class="tm">tarik = panjang handle</text></g>
+    <g transform="translate(360 0)"><text x="10" y="16" class="tr">3 · TUTUP JALUR</text>
+    <path d="M30 120L30 60L100 40L150 90L110 130Z" class="sk" stroke-width="2" style="fill:rgba(230,25,25,.35)"/>
+    <rect x="25" y="115" width="10" height="10" class="rd"/><text x="10" y="156" class="tm">kotak merah = node awal</text></g>
+  </svg><figcaption><b>Gambar 3.</b> Tiga aksi dasar Pen Tool.</figcaption></figure>
+  <ul><li><b>Node</b>: titik pada jalur. <b>Handle</b>: tangkai penentu lengkung di tiap node.</li><li><b>Prinsip hemat node</b>: letakkan node hanya di titik sudut dan titik balik kurva. Kurva halus butuh sedikit node dengan handle yang tepat.</li></ul>
+  <div class="widget" data-w="bezier" data-title="LAB PEN TOOL (BEZIER)"></div>
+  <figure class="fig"><svg viewBox="0 0 540 150">
+    <circle cx="100" cy="72" r="46" class="sk" stroke-width="3"/><g class="fg"><rect x="142.0" y="68.0" width="8" height="8"/><rect x="138.5" y="85.6" width="8" height="8"/><rect x="128.5" y="100.5" width="8" height="8"/><rect x="113.6" y="110.5" width="8" height="8"/><rect x="96.0" y="114.0" width="8" height="8"/><rect x="78.4" y="110.5" width="8" height="8"/><rect x="63.5" y="100.5" width="8" height="8"/><rect x="53.5" y="85.6" width="8" height="8"/><rect x="50.0" y="68.0" width="8" height="8"/><rect x="53.5" y="50.4" width="8" height="8"/><rect x="63.5" y="35.5" width="8" height="8"/><rect x="78.4" y="25.5" width="8" height="8"/><rect x="96.0" y="22.0" width="8" height="8"/><rect x="113.6" y="25.5" width="8" height="8"/><rect x="128.5" y="35.5" width="8" height="8"/><rect x="138.5" y="50.4" width="8" height="8"/></g>
+    <text x="30" y="140" class="tr">16 NODE: boros, bergelombang</text>
+    <circle cx="380" cy="72" r="46" class="sk" stroke-width="3"/><g class="fg"><rect x="422.0" y="68.0" width="8" height="8"/><rect x="376.0" y="114.0" width="8" height="8"/><rect x="330.0" y="68.0" width="8" height="8"/><rect x="376.0" y="22.0" width="8" height="8"/></g>
+    <text x="310" y="140" class="tr">4 NODE: efisien, mulus</text>
+  </svg><figcaption><b>Gambar 4.</b> Lingkaran yang sama dengan 16 node (kiri) dan 4 node (kanan). Lebih sedikit node = lebih mudah diedit dan lebih halus.</figcaption></figure>
+  <div class="tscroll"><table>
+    <tr><th>Aksi di CorelDRAW</th><th>Hasil</th></tr>
+    <tr><td>Klik</td><td>Node sudut (garis lurus)</td></tr>
+    <tr><td>Klik-tahan + tarik</td><td>Node kurva dengan handle</td></tr>
+    <tr><td>Klik node awal</td><td>Menutup jalur</td></tr>
+    <tr><td>Shape Tool (<kbd>F10</kbd>): klik ganda pada jalur</td><td>Menambah node</td></tr>
+    <tr><td>Shape Tool: klik ganda pada node</td><td>Menghapus node</td></tr>
+    <tr><td>Property Bar: Cusp / Smooth / Symmetrical</td><td>Jenis node: sudut tajam / mulus / handle simetris</td></tr>
+  </table></div>
+  <h3>Persiapan sketsa yang baik</h3>
+  <ul><li>Gambar dengan pensil tegas atau spidol tipis di kertas putih polos.</li><li>Foto tegak lurus dari atas dengan cahaya merata (tanpa bayangan tangan).</li><li>Sederhanakan: bentuk besar dulu, detail kecil belakangan.</li><li>Alternatif otomatis (PowerTRACE di menu Bitmaps) cepat tetapi hasilnya banyak node; latihan manual lebih terkendali.</li></ul>
+
+  <h2>6 · Ketebalan garis (outline)</h2>
+  <figure class="fig"><svg viewBox="0 0 540 140">
+    <text x="10" y="16" class="tr">LINE CAPS · ujung garis</text>
+    <g stroke-width="14" class="sk"><line x1="30" y1="44" x2="110" y2="44" style="stroke-linecap:butt"/><line x1="30" y1="76" x2="110" y2="76" style="stroke-linecap:round"/><line x1="30" y1="108" x2="110" y2="108" style="stroke-linecap:square"/></g>
+    <g class="tm"><text x="135" y="48">butt (rata)</text><text x="135" y="80">round (bulat)</text><text x="135" y="112">square (kotak)</text></g>
+    <text x="300" y="16" class="tr">CORNERS · sudut garis</text>
+    <g stroke-width="12" class="sk"><path d="M300 56l24-30 24 30" style="stroke-linejoin:miter"/><path d="M380 56l24-30 24 30" style="stroke-linejoin:round"/><path d="M460 56l24-30 24 30" style="stroke-linejoin:bevel"/></g>
+    <g class="tm"><text x="296" y="84">miter</text><text x="376" y="84">round</text><text x="456" y="84">bevel</text></g>
+    <text x="300" y="108" class="tm">Round = ramah (anak)</text><text x="300" y="122" class="tm">Miter = tegas / teknis</text>
+  </svg><figcaption><b>Gambar 5.</b> Pengaturan garis di dialog Outline Pen (<kbd>F12</kbd>).</figcaption></figure>
+  <ul><li>Garis tebal untuk objek utama (2–4 pt), tipis untuk detail (0,5–1 pt), konsisten dalam satu ilustrasi.</li><li>Centang <b>Scale with image</b> agar garis ikut membesar bila gambar di-skala.</li><li>Ubah garis menjadi objek: <b>Object → Convert Outline to Object</b> (<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>Q</kbd>).</li></ul>
+
+  <h2>7 · Warna dan urutan objek</h2>
+  <ul><li>Batasi 3–4 warna dari brand; satu warna aksen untuk focal point.</li><li>Urutan depan-belakang: <kbd>Ctrl</kbd>+<kbd>PgUp</kbd> / <kbd>PgDn</kbd>.</li><li>Tutup semua jalur sebelum diwarnai; jalur terbuka tidak bisa diisi dengan benar.</li></ul>
+  <p class="refs">Bacaan: Ambrose &amp; Harris (2011), <i>Layout for Graphic Designers</i> (bab grid dan hierarki). Panduan resmi: <a href="https://product.corel.com/help/CorelDRAW/540229932/Main/EN/User-Guide/CorelDRAW-X7.pdf" target="_blank" rel="noopener">CorelDRAW X7 User Guide</a> (bagian “Drawing lines” dan “Shaping curve objects”).</p>
+</section>
+
+<section data-tab="Praktikum">
+  <h2>Rundown praktikum 50 menit</h2>
+  <div class="tscroll"><table class="agenda">
+    <tr><th>Menit</th><th>Kegiatan</th><th>Hasil yang diperiksa</th></tr>
+    <tr><td>00–06</td><td>A · Impor dan kunci sketsa</td><td>Layer SKETSA terkunci</td></tr>
+    <tr><td>06–26</td><td>B · Tracing dengan Pen Tool</td><td>Bentuk utama ≤ 15 node</td></tr>
+    <tr><td>26–34</td><td>C · Warna dan outline</td><td>Palet ≤ 4 warna</td></tr>
+    <tr><td>34–48</td><td>D · Layout poster</td><td>5 elemen poster lengkap</td></tr>
+    <tr><td>48–50</td><td>E · Simpan dan kumpul</td><td>.cdr dan PDF</td></tr>
+  </table></div>
+  <div class="callout"><b class="t">Persiapan</b>Siapkan sketsa pensil sederhana di kertas A4 (tema kesehatan: cuci tangan, donor darah, atau gigi sehat). Foto atau pindai dengan cahaya merata. Simpan sebagai JPG di komputer lab.</div>
+
+  <h2>Hasil akhir yang dituju</h2>
+  <figure class="fig"><svg viewBox="0 0 540 190">
+    <g transform="translate(10 8)"><rect width="110" height="174" class="bk" style="stroke:#EAEAEA"/><text x="55" y="30" text-anchor="middle" style="font:400 15px 'Archivo Black',Impact,sans-serif;fill:#EAEAEA">DONOR</text><text x="55" y="48" text-anchor="middle" style="font:400 15px 'Archivo Black',Impact,sans-serif;fill:#E61919">DARAH</text>
+    <path d="M55 62C55 62 30 92 30 108a25 25 0 0 0 50 0C80 92 55 62 55 62z" class="rd" style="stroke:#EAEAEA;stroke-width:3"/>
+    <text x="55" y="142" text-anchor="middle" style="font:9px monospace;fill:#EAEAEA">SAB 14 MARET</text><rect x="25" y="150" width="60" height="14" class="rd"/><text x="55" y="160" text-anchor="middle" style="font:700 8px monospace;fill:#fff">DAFTAR DI SINI</text></g>
+    <text x="150" y="34" class="tr">Kriteria hasil poster</text>
+    <g class="tx"><text x="150" y="58">✓ Ilustrasi hasil tracing (vektor, outline 2 pt)</text><text x="150" y="78">✓ Headline besar: terbaca pertama</text><text x="150" y="98">✓ Satu warna aksen (merah) untuk fokus</text><text x="150" y="118">✓ Info tanggal/tempat dikelompokkan</text><text x="150" y="138">✓ CTA di kanan/bawah, logo kecil</text><text x="150" y="158">✓ Margin aman ≥ 15 mm</text></g>
+  </svg><figcaption><b>Gambar 6.</b> Contoh arah hasil (versi sangat disederhanakan). Poster kamu memakai sketsamu sendiri di A3.</figcaption></figure>
+
+  <h2>A · Impor dan kunci sketsa</h2>
+  <ol class="steps">
+    <li>Buat dokumen A3 portrait (297 × 420 mm), CMYK, mm. Simpan.</li>
+    <li><b>File → Import</b> (<kbd>Ctrl</kbd>+<kbd>I</kbd>), pilih sketsa, klik di halaman untuk menempatkan.</li>
+    <li>Atur ukuran agar menutupi sebagian halaman (kunci proporsi).</li>
+    <li>Buka <b>Window → Dockers → Objects</b>. Buat layer baru <code>SKETSA</code> dan layer <code>VEKTOR</code> di atasnya; pindahkan sketsa ke <code>SKETSA</code>.</li>
+    <li>Kunci layer sketsa (ikon gembok). Redupkan sketsa bila perlu lewat transparansi agar garis jiplakan terlihat jelas.</li>
+  </ol>
+  <div class="callout w"><b class="t">Checkpoint A</b>Sketsa tidak bisa tergeser saat kamu menggambar di atasnya.</div>
+
+  <h2>B · Tracing dengan Pen Tool</h2>
+  <ol class="steps">
+    <li>Aktifkan layer <code>VEKTOR</code>. Pilih <b>Pen Tool</b> (flyout alat Curve; Bézier Tool juga bisa).</li>
+    <li>Mulai dari bagian paling besar (badan/tangan). Klik di sudut, klik-tarik di lengkungan.</li>
+    <li>Tutup jalur dengan klik di node awal.</li>
+    <li>Perbaiki dengan <b>Shape Tool</b>: geser node/handle sampai garis mengikuti sketsa. Hapus node berlebih (klik ganda).</li>
+    <li>Lanjutkan bagian lain, tiap bentuk jadi jalur tertutup terpisah.</li>
+    <li>Target: bentuk utama ≤ 15 node; garis halus tanpa patah-patah. Gunakan <kbd>Ctrl</kbd>+<kbd>Z</kbd> bila node meleset.</li>
+  </ol>
+  <div class="callout w"><b class="t">Checkpoint B</b>Pilih bentuk utama dengan Shape Tool dan baca jumlah node di status bar: apakah ≤ 15? Bentuknya tertutup?</div>
+
+  <h2>C · Warna dan outline</h2>
+  <ol class="steps">
+    <li>Sembunyikan layer sketsa. Isi tiap bentuk dengan palet maksimal 4 warna dari brand (Shift+F11).</li>
+    <li>Atur outline: <kbd>F12</kbd> → 2 pt untuk bentuk utama, sudut dan ujung bulat.</li>
+    <li>Susun urutan depan-belakang: <b>Object → Order</b> (<kbd>Ctrl</kbd>+<kbd>PgUp</kbd>/<kbd>PgDn</kbd>).</li>
+  </ol>
+
+  <h2>D · Layout poster</h2>
+  <ol class="steps">
+    <li>Tempatkan ilustrasi sebagai focal point di sepertiga atas-tengah.</li>
+    <li>Headline besar di atas atau bawah ilustrasi (font display/sans bold), ≥ 3× ukuran info.</li>
+    <li>Blok info (tanggal, tempat, jam) dalam satu kelompok yang rapat, kontras tinggi.</li>
+    <li>CTA di kanan bawah (pola Z) dan logo RS di dasar. Margin aman ≥ 15 mm.</li>
+    <li>Lakukan squint test: perkecil tampilan (<kbd>F4</kbd> lalu zoom out) dan sipitkan mata. Apakah headline dan ilustrasi masih dominan?</li>
+  </ol>
+  <h2>E · Simpan dan kumpul</h2>
+  <ol class="steps"><li><kbd>Ctrl</kbd>+<kbd>S</kbd>. Ekspor PDF: <b>File → Publish to PDF</b>.</li><li>Beri nama <code>NIM_Nama_Poster.pdf</code>.</li></ol>
+  <h3>Masalah umum</h3>
+  <div class="tscroll"><table>
+    <tr><th>Gejala</th><th>Solusi</th></tr>
+    <tr><td>Bentuk tidak bisa diisi warna</td><td>Jalur belum tertutup; klik node awal atau gunakan Close Curve di Property Bar.</td></tr>
+    <tr><td>Kurva bergelombang</td><td>Terlalu banyak node; hapus sebagian dan atur handle.</td></tr>
+    <tr><td>Sketsa ikut tergeser</td><td>Layer belum dikunci.</td></tr>
+    <tr><td>Garis terlihat patah di ujung</td><td>Ubah jenis node jadi Smooth atau Symmetrical.</td></tr>
+  </table></div>
+</section>
+
+<section data-tab="Latihan Sesi">
+  <h2>Tugas sesi pertemuan 4</h2>
+  <article class="task" data-id="drill" data-min="10"><h3>Latihan 1 · Drill Pen Tool di browser</h3>
+    <p>Gunakan lab Bezier di tab Teori. Jiplak tiga bentuk bayangan (hati, palang, tetes). Catat jumlah node tiap bentuk, usahakan hati ≤ 6 dan tetes ≤ 4.</p>
+    <textarea class="note" data-key="drill" placeholder="Hati: ..  Palang: ..  Tetes: .."></textarea></article>
+  <article class="task" data-id="trace" data-min="25"><h3>Latihan 2 · Tracing sketsa</h3>
+    <p>Selesaikan bagian A–C praktikum. Kumpulkan screenshot sebelum (sketsa) dan sesudah (vektor).</p>
+    <details><summary>Rubrik kemiripan</summary><ul><li>Proporsi bentuk mirip sketsa</li><li>Jumlah node efisien</li><li>Garis mulus tanpa patah</li><li>Warna dan outline konsisten</li></ul></details></article>
+  <article class="task" data-id="poster" data-min="25"><h3>Latihan 3 · Poster A3</h3>
+    <p>Selesaikan bagian D. Poster harus mengandung 5 elemen (headline, visual, info, CTA, identitas).</p></article>
+  <article class="task" data-id="kritik" data-min="10"><h3>Latihan 4 · Kritik silang (peer review)</h3>
+    <p>Tukar laptop dengan teman. Lakukan squint test pada poster mereka dan jawab:</p>
+    <ol class="steps"><li>Apa yang terbaca pertama?</li><li>Apa pesan utama poster?</li><li>Satu hal yang membuatnya sulit dibaca?</li><li>Satu saran perbaikan konkret.</li></ol></article>
+  <article class="task" data-id="amati" data-min="10"><h3>Latihan 5 · Bedah poster komersial</h3>
+    <p>Foto satu poster komersial. Tentukan fokus, pola baca (Z/F/sepertiga), dan satu elemen yang bisa dihapus. Tulis 3 kalimat.</p>
+    <textarea class="note" data-key="amati"></textarea></article>
+  <article class="task" data-id="bonus" data-min="15"><h3>Latihan 6 · Tantangan: variasi gaya</h3>
+    <p>Duplikat halaman poster dan buat versi lain dengan palet monokrom (satu warna + hitam/putih). Mana yang lebih kuat? Tulis satu kalimat.</p></article>
+</section>
+
+<section data-tab="Kuis">
+  <h2>Kuis</h2>
+  <div class="quiz"><script type="application/json">[
+    {"q":"Titik pada poster yang pertama kali menarik mata disebut…","o":["Bleed","Focal point","Gutter","Baseline"],"a":1,"e":"Focal point dibangun lewat ukuran, kontras, warna, atau posisi."},
+    {"q":"Pada Pen Tool, klik-tahan lalu tarik menghasilkan…","o":["Node sudut tanpa handle","Node kurva dengan handle","Jalur tertutup","Teks"],"a":1,"e":"Tarikan membentuk handle yang mengatur lengkung."},
+    {"q":"Agar vektor hasil tracing mudah diedit, sebaiknya…","o":["Pakai banyak node","Pakai node sehemat mungkin di titik kunci","Hindari Shape Tool","Gunakan hanya garis lurus"],"a":1,"e":"Sedikit node = kurva halus dan mudah diedit."},
+    {"q":"Pola baca Z cocok untuk…","o":["Poster dengan sedikit teks","Buku tebal","Tabel panjang","Dokumen hukum"],"a":0,"e":"Z untuk desain ringan; F untuk teks lebih banyak."},
+    {"q":"Pintasan membuka dialog Outline Pen adalah…","o":["F6","F7","F10","F12"],"a":3,"e":"F12 = Outline Pen."},
+    {"q":"Jalur yang tidak bisa diberi warna isi kemungkinan besar…","o":["Terlalu besar","Belum tertutup","Berwarna merah","Berada di layer atas"],"a":1,"e":"Tutup jalur dengan klik node awal."},
+    {"q":"Urutan prioritas ukuran pada poster informasi yang benar adalah…","o":["Info > headline > logo","Headline > visual > info > CTA > logo","Logo > info > headline","Semua sama besar"],"a":1,"e":"Hierarki ukuran mengikuti prioritas pesan."},
+    {"q":"Untuk menambah node pada jalur dengan Shape Tool, lakukan…","o":["Klik kanan","Klik ganda pada jalur","Tekan Delete","Tekan F12"],"a":1,"e":"Klik ganda pada jalur menambah node; klik ganda pada node menghapusnya."}
+  ]</script></div>
+</section>
+
+</main>
+</body>
+</html>
